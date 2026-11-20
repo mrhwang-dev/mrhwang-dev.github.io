@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="ja" href="https://mrhwang-dev.github.io/hwangchiwoong/ja/network.html">
 <link rel="alternate" hreflang="x-default" href="https://mrhwang-dev.github.io/hwangchiwoong/network.html">
 <title>生成画像ではなく現場の写真で、団体のサイトを建て直す ― ファン・チウン</title>
-<meta name="description" content="ファン・チウンのポートフォリオ。Campus Press Hub と 大学ジャーナリスト・ネットワークのサイトを企画し、つくった記録。">
+<meta name="description" content="ファン・チウンのポートフォリオ。Campus Press Hub と大学ジャーナリスト・ネットワークのサイトを企画し、つくった記録。">
 <link rel="preload" href="../fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/ChosunilboNM.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -57,7 +57,7 @@ img{max-width:100%}
 <div class="s12" style="max-width: 920px">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; color: #B3121F">作品2・大学ジャーナリスト・ネットワークのサイト・運営中</p>
 <h1 class="hl" style="margin: 0; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 3.6rem; line-height: 1.2; letter-spacing: -0.035em">生成画像ではなく現場の写真で、団体のサイトを建て直す</h1>
-<p style="margin: 1.25rem 0 0; font-size: 1.25rem; line-height: 1.6; color: #333333">かつて議長を務めた学生メディア支援団体のサイトを改修した。目標は二つだった。団体が実際にしたことだけを見せること。コードを知らない運営メンバーでも自分で直せること。</p>
+<p style="margin: 1.25rem 0 0; font-size: 1.25rem; line-height: 1.6; color: #333333">かつて議長を務めた学生メディア支援団体のサイトを改修した。団体が実際にしたことだけを見せ、コードを知らない運営メンバーでも自分で直せるようにした。</p>
 <p style="margin: 1.5rem 0 0; font-size: 14px; color: #5A5A5A">企画・編集 ファン・チウン・実装 Claude・2026年11月19日 正式公開・ <a href="https://univjournalist.network">univjournalist.network</a></p>
 </div>
 
@@ -73,12 +73,12 @@ img{max-width:100%}
 </div>
 
 <article class="s8 body" style="margin-top: 2.5rem; font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
-<p><strong style="font-family: 'PretendardJP', 'Pretendard', sans-serif">【ソウル】</strong> 大学ジャーナリスト・ネットワークは2020年3月に発足した非営利団体だ。毎年、韓国全土から学生記者100人ほどが集まるカンファレンスを開き、無料の実務講座であるアカデミーとアワードを運営している。学校が学生メディアを弾圧すれば対応チームを組み、編集権の侵害についての相談も受ける。</p>
-<p>サイトはこうした事業を知らせる窓口だ。ところが事業が増えても、サイトを直せる人は増えなかった。［改修を決めたきっかけを一、二文で］</p>
+<p><strong style="font-family: 'PretendardJP', 'Pretendard', sans-serif">【ソウル】</strong> 大学ジャーナリスト・ネットワークは2020年3月に発足した非営利団体だ。毎年、韓国全土から学生記者100人ほどが集まるカンファレンスを開き、無料の実務講座（アカデミー）とアワードも運営している。学校が学生メディアを弾圧すれば対応チームを組み、編集権の侵害についての相談も受ける。</p>
+<p>サイトはこうした事業を知らせる窓口だ。ところが事業が増えても、サイトを直せる人は増えなかった。それまでサイトは外部のワンページ制作サービスで運営していた。ページを一つ増やすにも追加料金がかかると言われ、自分でつくることにした。</p>
 
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">編集判断3つ</h2>
 <p><strong>一、画像は生成しない。</strong> 生成画像は使わず、団体が行事で自ら撮った写真だけを使うことにした。ジャーナリストの団体のサイトなら、実際にあった場面だけを見せるべきだと考えた。</p>
-<p><strong>二、運営メンバーが自分で直す。</strong> お知らせを一行変えるにもコードを直さなければならない仕組みだった。文章と設定を Cloudflare のデータベースに移し、運営メンバーが管理画面からすぐ直せるようにすることにした。直し方は実務ガイドブックに別にまとめた。</p>
+<p><strong>二、運営メンバーが自分で直す。</strong> お知らせを一行変えるにもコードを直さなければならない仕組みだった。文章と設定を Cloudflare のデータベースに移し、運営メンバーが管理画面からすぐ直せるようにした。直し方は実務ガイドブックに別にまとめた。</p>
 <p><strong>三、人が替わっても残るようにする。</strong> 学生メディアの団体は毎年人が入れ替わる。コードのリポジトリを個人アカウントから団体のアカウントに移し、担当者が去ってもサイトが団体に残るようにした。</p>
 
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">公開</h2>
@@ -106,7 +106,7 @@ img{max-width:100%}
 <div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">サイトが紹介している事業</p>
 <ul style="margin: 0; padding: 0 0 0 1.1rem; font-size: 14px; line-height: 1.75">
-<li>大学ジャーナリスト・カンファレンス（平均100人ほど）</li>
+<li>大学ジャーナリスト・カンファレンス（100人ほど）</li>
 <li>大学ジャーナリスト・アカデミー</li>
 <li>大学ジャーナリスト・アワード</li>
 <li>学生メディアへの弾圧への対応</li>
