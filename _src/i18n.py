@@ -90,7 +90,7 @@ EN = {
 "정정 2 · 2026년 10월": "Correction 2 · October 2026",
 "정정 요청에 10일 안에 답한다": "Correction requests answered within 10 days",
 "요청이 들어오면 운영자에게 바로 알림 메일": "An alert email to the operator for every new request",
-"정정 안내 페이지에서 10일 안에 답하겠다고 약속했다. 그런데 요청이 메일로 오지 않고 관리자 화면에만 쌓이고 있었다. 약속을 지킬 장치가 없었던 셈이다. 10월 14일부터는 요청이 저장되는 즉시 운영자에게 알림 메일이 간다. 요청자의 이름이나 내용은 메일에 넣지 않는다.": "The corrections page promised a reply within 10 days. But requests weren't arriving by email; they piled up in the admin console. Nothing was in place to keep that promise. Since October 14, the operator gets an alert email the moment a request is saved. The email carries no requester names or request details.",
+"정정 안내 페이지에서 10일 안에 답하겠다고 약속했다. 그런데 요청이 메일로 오지 않고 관리자 화면에만 쌓이고 있었다. 약속을 지킬 장치가 없었던 셈이다. 10월 14일부터는 요청이 저장되는 즉시 운영자에게 알림 메일이 간다. 요청자의 이름이나 내용은 메일에 넣지 않는다. 운영 투명성 보고서에 따르면 4분기에 들어온 정정 요청 3건은 모두 하루 안에 처리했다.": "The corrections page promised a reply within 10 days. But requests weren't arriving by email; they piled up in the admin console. Nothing was in place to keep that promise. Since October 14, the operator gets an alert email the moment a request is saved. The email carries no requester names or request details. The transparency report shows that all three correction requests received this quarter were handled within a day.",
 "후속 · 2026년 11월": "Follow-up · November 2026",
 "월 기본 요금 5달러 안에서 운영": "Running within the $5 base monthly plan",
 "대량 쓰기 전에 이번 달 남은 양부터 확인": "Check the month's remaining allowance before any bulk write",
@@ -166,6 +166,14 @@ EN = {
 "1학년 때 쓴 학생회 비리 보도와, 그 신문이 사라진 일을 다룬 기사.": "Coverage of my first-year story on student-council corruption and of the paper's disappearance.",
 "「경찰, 조선대 학생회 횡령·장학금 편법 수령 수사 착수」": "“Police investigate Chosun University student-council embezzlement and scholarship misuse” (in Korean)",
 "보도 뒤 경찰이 수사에 나섰다는 기사.": "Report that police opened an investigation after the story.",
+"구글 검색 클릭": "Google search clicks",
+"구글 검색 노출": "Google search impressions",
+"구글 색인 페이지": "Pages indexed by Google",
+"출처: 구글 검색 콘솔. 클릭·노출은 2026년 10월 5일~11월 18일, 색인은 11월 20일 기준": "Source: Google Search Console. Clicks and impressions Oct. 5–Nov. 18, 2026; indexed pages as of Nov. 20",
+"공개 문서:": "Public documents:",
+"수집 원칙": "Collection policy",
+"운영 투명성 보고서": "Transparency report",
+"정정·수집 제외 요청": "Corrections and removal requests",
 }
 
 JA = {
@@ -258,7 +266,7 @@ JA = {
 "정정 2 · 2026년 10월": "訂正2・2026年10月",
 "정정 요청에 10일 안에 답한다": "訂正の求めには10日以内に回答する",
 "요청이 들어오면 운영자에게 바로 알림 메일": "求めが届くとすぐ運営者に通知メール",
-"정정 안내 페이지에서 10일 안에 답하겠다고 약속했다. 그런데 요청이 메일로 오지 않고 관리자 화면에만 쌓이고 있었다. 약속을 지킬 장치가 없었던 셈이다. 10월 14일부터는 요청이 저장되는 즉시 운영자에게 알림 메일이 간다. 요청자의 이름이나 내용은 메일에 넣지 않는다.": "訂正の案内ページは10日以内に答えると約束していた。ところが求めはメールで届かず、管理画面にたまるだけだった。約束を守る仕組みがなかったことになる。10月14日からは、求めが保存されるとすぐ運営者に通知メールが届く。メールには求めた人の名前や内容は入れない。",
+"정정 안내 페이지에서 10일 안에 답하겠다고 약속했다. 그런데 요청이 메일로 오지 않고 관리자 화면에만 쌓이고 있었다. 약속을 지킬 장치가 없었던 셈이다. 10월 14일부터는 요청이 저장되는 즉시 운영자에게 알림 메일이 간다. 요청자의 이름이나 내용은 메일에 넣지 않는다. 운영 투명성 보고서에 따르면 4분기에 들어온 정정 요청 3건은 모두 하루 안에 처리했다.": "訂正の案内ページは10日以内に答えると約束していた。ところが求めはメールで届かず、管理画面にたまるだけだった。約束を守る仕組みがなかったことになる。10月14日からは、求めが保存されるとすぐ運営者に通知メールが届く。メールには求めた人の名前や内容は入れない。運営の透明性報告書によると、第4四半期に届いた訂正の求め3件はすべて1日以内に処理した。",
 "후속 · 2026년 11월": "続報・2026年11月",
 "월 기본 요금 5달러 안에서 운영": "月額基本料金5ドルの範囲で運営",
 "대량 쓰기 전에 이번 달 남은 양부터 확인": "大量の書き込みの前に今月の残りを確認",
@@ -334,5 +342,13 @@ JA = {
 "1학년 때 쓴 학생회 비리 보도와, 그 신문이 사라진 일을 다룬 기사.": "1年生のときに書いた学生会の不正報道と、その新聞が消えた出来事を伝える記事。",
 "「경찰, 조선대 학생회 횡령·장학금 편법 수령 수사 착수」": "「警察、朝鮮大の学生会横領・奨学金の不正受給を捜査へ」（韓国語）",
 "보도 뒤 경찰이 수사에 나섰다는 기사.": "報道のあと警察が捜査に乗り出したという記事。",
+"구글 검색 클릭": "Google検索のクリック",
+"구글 검색 노출": "Google検索の表示回数",
+"구글 색인 페이지": "Googleのインデックス済みページ",
+"출처: 구글 검색 콘솔. 클릭·노출은 2026년 10월 5일~11월 18일, 색인은 11월 20일 기준": "出典：Google Search Console。クリック・表示回数は2026年10月5日～11月18日、インデックスは11月20日時点",
+"공개 문서:": "公開文書：",
+"수집 원칙": "収集方針",
+"운영 투명성 보고서": "運営の透明性報告書",
+"정정·수집 제외 요청": "訂正・収集除外の求め",
 }
 JA.pop("취재하던 사람이 만든 것들의 기록입니다. 기획と판단, 검증은 제가 하고 코드는 AI가 씁니다. 누가 무엇을 했는지는 기사마다 끝에 크레딧으로 밝혔습니다.", None)
