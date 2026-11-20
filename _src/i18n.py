@@ -2,10 +2,11 @@
 # 한국어 원문 → 영어·일본어. 키는 한국어 페이지의 텍스트 조각(앞뒤 공백 제외)과 정확히 일치해야 한다.
 
 EN = {
+"배포한 신문 1,700여 부가 세 시간 만에 사라졌다.": "About 1,700 copies vanished within three hours of distribution.",
 "코드를 읽지 못하는 황치웅이 AI와 일하며 지키는 규칙 네 가지.": "Four rules Chiwoong Hwang, who can't read code, follows when working with AI.",
 "2021년 6월": "Jun. 2021",
 "2021년 10월": "Oct. 2021",
-"2021년 9~10월": "Sep.–Oct. 2021",
+"2021년 9~10월": "Sept.–Oct. 2021",
 "MBC 뉴스데스크": "MBC Newsdesk",
 "엠빅뉴스": "Mbig News",
 "매거진닷킴": "Magazine.kim",
@@ -82,7 +83,7 @@ EN = {
 "이번 호 정정": "Corrections in this issue",
 "저장소에 올릴 때마다 자동 검사": "Automated checks on every push",
 "검토 요청과 수동 실행 때만 검사": "Checks only on pull requests or manual runs",
-"이틀 새 248번 작동해 한 달 치 사용량 2,000분이 바닥났다. 원인을 찾아 실행 조건을 바꿨다.": "The checks ran 248 times in two days and used up the month's 2,000 minutes. I traced the cause and changed when they run.",
+"코드를 올릴 때마다 도는 자동 검사가 이틀 새 248번 작동해 한 달 치 사용량 2,000분이 바닥났다. 원인을 찾아 실행 조건을 바꿨다.": "The automated checks that ran on every code upload fired 248 times in two days and used up the month's 2,000 minutes. I traced the cause and changed when they run.",
 "허브 기사의 정정란": "See the hub story's corrections",
 "크레딧은 이렇게 적습니다": "How I write credits",
 "기사 끝에 '취재 ○○, 사진 ○○'을 적듯, 작업마다 역할을 나눠 적습니다. 저는 무엇을 만들지 정하고, 결과물이 의도대로 작동하는지 직접 써 보며 확인합니다.": "The way a news story credits its reporter and photographer, I credit each role on every project. I decide what to build, then use the result myself to check that it works as intended.",
@@ -229,6 +230,7 @@ EN = {
 }
 
 JA = {
+"배포한 신문 1,700여 부가 세 시간 만에 사라졌다.": "配った新聞1,700部余りが、3時間で消えた。",
 "코드를 읽지 못하는 황치웅이 AI와 일하며 지키는 규칙 네 가지.": "コードが読めないファン・チウンが、AIと仕事をするときに守る四つのルール。",
 "2021년 6월": "2021年6月",
 "2021년 10월": "2021年10月",
@@ -310,7 +312,7 @@ JA = {
 "이번 호 정정": "今号の訂正",
 "저장소에 올릴 때마다 자동 검사": "リポジトリに上げるたびに自動チェック",
 "검토 요청과 수동 실행 때만 검사": "プルリクエストと手動実行のときだけチェック",
-"이틀 새 248번 작동해 한 달 치 사용량 2,000분이 바닥났다. 원인을 찾아 실행 조건을 바꿨다.": "2日で248回実行され、1か月分の利用枠2,000分を使い切った。原因を突き止め、実行条件を変えた。",
+"코드를 올릴 때마다 도는 자동 검사가 이틀 새 248번 작동해 한 달 치 사용량 2,000분이 바닥났다. 원인을 찾아 실행 조건을 바꿨다.": "コードを上げるたびに走る自動チェックが2日で248回実行され、1か月分の利用枠2,000分を使い切った。原因を突き止め、実行条件を変えた。",
 "허브 기사의 정정란": "ハブの記事の訂正欄へ",
 "크레딧은 이렇게 적습니다": "クレジットの書き方",
 "기사 끝에 '취재 ○○, 사진 ○○'을 적듯, 작업마다 역할을 나눠 적습니다. 저는 무엇을 만들지 정하고, 결과물이 의도대로 작동하는지 직접 써 보며 확인합니다.": "記事の最後に「取材○○、写真○○」と書くように、作品ごとに役割を分けて記します。私は何をつくるかを決め、出来上がったものが意図どおりに動くかを自分で使って確かめます。",

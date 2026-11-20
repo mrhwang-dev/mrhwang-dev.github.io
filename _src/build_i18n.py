@@ -45,6 +45,38 @@ def prepare_source(s, page):
         s = s.replace('<meta name="robots" content="noindex">', '<meta name="robots" content="noindex">\n{{ALT}}', 1)
     return s
 
+
+LOCALE = {'ko': 'ko_KR', 'en': 'en_US', 'ja': 'ja_JP'}
+PERSON = {'ko': ('황치웅', '웹 서비스·콘텐츠 기획·운영'), 'en': ('Chiwoong Hwang', 'Web service and content planning and operations'), 'ja': ('ファン・チウン', 'ウェブサービス・コンテンツの企画・運営')}
+
+def share_tags(s, code, page):
+    tail = '' if page == 'index.html' else page
+    url = BASE + LANGS[code][1] + tail
+    title = html.unescape(re.search(r'<title>(.*?)</title>', s, re.S).group(1))
+    desc = html.unescape(re.search(r'<meta name="description" content="([^"]*)"', s).group(1))
+    e = lambda x: html.escape(x, quote=True)
+    tags = [f'<link rel="canonical" href="{url}">',
+            '<link rel="icon" type="image/png" href="img/favicon.png">',
+            '<link rel="apple-touch-icon" href="img/apple-touch-icon.png">',
+            '<meta name="theme-color" content="#ffffff">',
+            f'<meta property="og:type" content="{"website" if page == "index.html" else "article"}">',
+            f'<meta property="og:site_name" content="{e(PERSON[code][0])}">',
+            f'<meta property="og:title" content="{e(title)}">',
+            f'<meta property="og:description" content="{e(desc)}">',
+            f'<meta property="og:url" content="{url}">',
+            f'<meta property="og:image" content="{BASE}img/og-{code}.png">',
+            '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
+            f'<meta property="og:locale" content="{LOCALE[code]}">',
+            '<meta name="twitter:card" content="summary_large_image">']
+    if page == 'index.html':
+        import json
+        ld = {"@context": "https://schema.org", "@type": "Person", "name": PERSON[code][0], "url": url,
+              "jobTitle": PERSON[code][1], "email": "mailto:facti301@gmail.com",
+              "alumniOf": {"@type": "CollegeOrUniversity", "name": "Chosun University"},
+              "sameAs": ["https://www.linkedin.com/in/chiwoong-h-a4b833171/"]}
+        tags.append('<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>')
+    return s.replace('{{ALT}}', '{{ALT}}\n' + '\n'.join(tags), 1)
+
 def translate(s, table):
     for ko in sorted(table, key=len, reverse=True):
         s = s.replace(ko, html.escape(table[ko], quote=True))
@@ -56,6 +88,8 @@ def build(page, src):
         s = src
         if code != 'ko':
             s = translate(s, EN if code == 'en' else JA)
+        s = share_tags(s, code, page)
+        if code != 'ko':
             s = s.replace('<html lang="ko">', f'<html lang="{code}">')
             s = re.sub(r'(src|href)="(img|fonts)/', r'\1="../\2/', s)
             s = s.replace('url(fonts/', 'url(../fonts/')
@@ -64,6 +98,7 @@ def build(page, src):
             s = s.replace('href="../fonts/PretendardVariable.woff2"', 'href="../fonts/PretendardJP-subset.woff2"').replace('href="../fonts/ChosunilboNM.woff2"', 'href="../fonts/ShipporiMinchoB1-subset.woff2"')
             s = s.replace("'Pretendard', sans-serif", "'PretendardJP', 'Pretendard', sans-serif")
             s = s.replace("'ChosunilboNM', serif", "'ShipporiB1', 'ChosunilboNM', serif")
+            s = s.replace('第2回</a> · <a', '第2回</a>・<a')
             s = s.replace('word-break:keep-all;overflow-wrap:break-word', 'word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere')
             s = s.replace('</style>', '@media (min-width:821px){.hlead{font-size:2.6rem!important}}\n@media (max-width:820px){.mast{white-space:nowrap;font-size:clamp(2.25rem,11vw,3.4rem)!important}}\n</style>', 1)
         s = re.sub(r'(<h[12][^>]*>[^<]*?)85만 건,', r'\1<span style="white-space:nowrap">85만 건,</span>', s)
