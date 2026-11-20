@@ -18,7 +18,7 @@
 @font-face{font-family:'Pretendard';src:url(../fonts/PretendardVariable.woff2) format('woff2');font-weight:45 920;font-style:normal;font-display:swap}
 @font-face{font-family:'ChosunilboNM';src:url(../fonts/ChosunilboNM.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
 body{margin:0;background:#ffffff;word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere}
-a{color:#141414}a:hover{color:#B3121F}
+a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:#BBBBBB}a:hover{color:#B3121F;text-decoration-color:currentColor}
 .wrap{max-width:1240px;margin:0 auto;padding:0 2.5rem;box-sizing:border-box}
 .cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:2.5rem}
 .s8{grid-column:span 8}.s4{grid-column:span 4}.s12{grid-column:span 12}
@@ -36,6 +36,7 @@ a{color:#141414}a:hover{color:#B3121F}
 
 *{box-sizing:border-box}
 img{max-width:100%}
+@media (min-width:821px){.hlead{font-size:2.6rem!important}}
 </style>
 </head>
 <body>
@@ -70,6 +71,10 @@ img{max-width:100%}
 <p><strong style="font-family: 'PretendardJP', 'Pretendard', sans-serif">【ソウル】</strong> 韓国の大学新聞、放送局、校誌、英字新聞の記事は、学校ごとに別々のサイトに散らばっている。学費の値上げや学生会の選挙のように多くの学校が同じ時期に経験する出来事でも、他校の新聞がどう書いたかを知るにはサイトを一つずつ開くしかなかった。［自分が経験した場面を一、二文で］</p>
 <p>Campus Press Hub は、これらの記事を一か所で探せるサービスだ。分野（大学・社会・文化・学術・人・世論・放送）、メディアの種類、期間、形式（記事・動画・PDF・紙面）で絞り込め、気になる大学を三つまで選んでまとめて読める。英語の記事も別に検索できる。</p>
 
+<figure style="margin: 2rem 0 1.5rem">
+<img src="../img/hub-issues.jpg" alt="「複数の大学が報じた話題」の画面。話題ごとに報じた大学と記事がまとまっている" width="1176" height="960" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD">
+<figcaption style="margin-top: 0.5rem; font-size: 12px; color: #5A5A5A">「複数の大学が報じた話題」の画面。三つ以上の大学のメディアが同じ出来事を報じると、記事を一つにまとめる。</figcaption>
+</figure>
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">編集判断4つ</h2>
 <p><strong>一、全文は載せない。</strong> ハブは記事を探す場所で、読む場所は元のメディアのページだ。全文を複製せず、元の記事へリンクする。収集方針と運営の透明性報告書を公開し、各メディアが訂正や収集除外を求められる窓口を別に設けた。</p>
 <p style="font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 15px">公開文書： <a href="https://campuspress.kr/collection-policy">収集方針</a> · <a href="https://campuspress.kr/transparency">運営の透明性報告書</a> · <a href="https://campuspress.kr/corrections">訂正・収集除外の求め</a></p>
@@ -82,12 +87,10 @@ img{max-width:100%}
 <p>トップ画面が遅い原因もそうして見つけた。画面を一度開くたびにデータベースと数十回やりとりしていたのを一桁に減らし、再び増えないよう回数を数える自動チェックを加えた。</p>
 <p>2026年10月には検索での露出を点検した。Google Search Console でインデックス済みのページは186、除外されたページは704。サイトマップのURL 1,184件のうち125件は、記事のない大学ページにつながっていた。サイトマップとページ情報を直したあと、11月20日にはインデックス済みのページが9,120に増えた。</p>
 
-<h2 id="corrections" style="margin: 2.75rem 0 0.5rem; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">訂正と続報</h2>
-<p style="font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 15px; color: #5A5A5A">誤りは消さず、線を引いて残した。</p>
 </article>
 
 <aside class="s4" style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 2.5rem">
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">数字で見るハブ</p>
 <div style="display: flex; flex-direction: column; gap: 1rem">
 <div><div style="font-family: 'PretendardJP', 'Pretendard', sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; font-size: 2.1rem; font-weight: 500">853,627</div><div style="font-size: 13px; color: #5A5A5A">収集した記事（韓国語の最新記事 750,813件）</div></div>
@@ -99,12 +102,7 @@ img{max-width:100%}
 <p style="margin: 1rem 0 0; font-size: 12px; line-height: 1.5; color: #5A5A5A">出典：Google Search Console。クリック・表示回数は2026年10月5日～11月18日、インデックスは11月20日時点</p>
 </div>
 
-<figure style="margin: 0">
-<img src="../img/hub-issues.jpg" alt="「複数の大学が報じた話題」の画面。話題ごとに報じた大学と記事がまとまっている" width="1176" height="960" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD">
-<figcaption style="margin-top: 0.5rem; font-size: 12px; color: #5A5A5A">「複数の大学が報じた話題」の画面。三つ以上の大学のメディアが同じ出来事を報じると、記事を一つにまとめる。</figcaption>
-</figure>
-
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">クレジット</p>
 <dl style="margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.55rem 1.25rem; font-size: 14px; line-height: 1.5">
 <dt style="font-weight: 700">企画・編集判断</dt><dd style="margin: 0">ファン・チウン</dd>
@@ -116,7 +114,9 @@ img{max-width:100%}
 </div>
 </aside>
 
-<section class="s12" aria-labelledby="corrections" style="margin-top: 0.5rem; border-top: 1px solid #141414">
+<section class="s12" aria-labelledby="corrections" style="margin-top: 2.5rem; border-top: 2px solid #141414; padding-top: 1.25rem">
+<h2 id="corrections" style="margin: 0 0 0.5rem; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">訂正と続報</h2>
+<p style="font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 15px; color: #5A5A5A">誤りは消さず、線を引いて残した。</p>
 <div class="three" style="gap: 2.5rem; padding-top: 1.5rem">
 
 <div>
@@ -143,7 +143,7 @@ img{max-width:100%}
 </div>
 </section>
 
-<nav class="s12" aria-label="ほかの記事" style="margin-top: 3.5rem; border-top: 4px solid #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem">
+<nav class="s12" aria-label="ほかの記事" style="margin-top: 3.5rem; border-top: 2px solid #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem">
 <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">1面へ</a>
 <a href="network.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">次の記事 ― ネットワークのサイト改修</a>
 </nav>
@@ -151,5 +151,10 @@ img{max-width:100%}
 </div>
 </div>
 </div>
+<footer class="wrap" style="font-family: 'PretendardJP', 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">
+<div style="border-top: 6px double #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem">
+<span>発行 ファン・チウン</span><span>最終更新 2026年11月20日</span><span>企画・編集 ファン・チウン・実装 Claude・原稿の推敲 agy</span><span>GitHub Pages で発行</span>
+</div>
+</footer>
 </body>
 </html>

@@ -13,7 +13,7 @@
 @font-face{font-family:'Pretendard';src:url(fonts/PretendardVariable.woff2) format('woff2');font-weight:45 920;font-style:normal;font-display:swap}
 @font-face{font-family:'ChosunilboNM';src:url(fonts/ChosunilboNM.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
 body{margin:0;background:#ffffff;word-break:keep-all;overflow-wrap:break-word}
-a{color:#141414}a:hover{color:#B3121F}
+a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:#BBBBBB}a:hover{color:#B3121F;text-decoration-color:currentColor}
 .wrap{max-width:1240px;margin:0 auto;padding:0 2.5rem;box-sizing:border-box}
 .cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:2.5rem}
 .s8{grid-column:span 8}.s4{grid-column:span 4}.s12{grid-column:span 12}
@@ -65,6 +65,10 @@ img{max-width:100%}
 <p><strong style="font-family: 'Pretendard', sans-serif">서울</strong> — 대학 학보와 방송국, 교지, 영자신문 기사는 학교마다 다른 홈페이지에 흩어져 있다. 등록금 인상이나 학생회 선거처럼 여러 학교가 같은 시기에 겪는 일도, 다른 학교 학보가 어떻게 썼는지 보려면 사이트를 하나씩 열어야 했다. [직접 겪은 장면 한두 문장]</p>
 <p>대학언론 허브는 이 기사들을 한곳에서 검색하는 서비스다. 분야(대학·사회·문화·학술·사람·여론·방송)와 언론 유형, 기간, 형식(기사·영상·PDF·지면)으로 기사를 거른다. 관심 대학은 세 곳까지 골라 모아 볼 수 있다. 영문 기사도 따로 검색된다.</p>
 
+<figure style="margin: 2rem 0 1.5rem">
+<img src="img/hub-issues.jpg" alt="'여러 대학이 다룬 이슈' 화면. 이슈마다 보도한 대학과 기사가 묶여 있다" width="1176" height="960" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD">
+<figcaption style="margin-top: 0.5rem; font-size: 12px; color: #5A5A5A">'여러 대학이 다룬 이슈' 화면. 대학 세 곳 이상의 언론이 같은 사안을 보도하면 기사를 한데 묶는다.</figcaption>
+</figure>
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">편집 판단 4가지</h2>
 <p><strong>하나, 전문을 싣지 않는다.</strong> 허브는 기사를 찾는 곳이고, 읽는 곳은 원래 언론의 지면이다. 기사 전문은 복제하지 않고 원문으로 잇는다. 수집 원칙과 운영 투명성 보고서를 공개하고, 각 언론이 정정이나 수집 제외를 요청할 창구를 따로 뒀다.</p>
 <p style="font-family: 'Pretendard', sans-serif; font-size: 15px">공개 문서: <a href="https://campuspress.kr/collection-policy">수집 원칙</a> · <a href="https://campuspress.kr/transparency">운영 투명성 보고서</a> · <a href="https://campuspress.kr/corrections">정정·수집 제외 요청</a></p>
@@ -77,12 +81,10 @@ img{max-width:100%}
 <p>홈 화면이 느린 원인도 그렇게 찾았다. 화면을 한 번 열 때 데이터베이스를 수십 번 오가던 것을 한 자릿수로 줄였다. 다시 늘어나지 않도록 이 횟수를 세는 자동 검사도 붙였다.</p>
 <p>2026년 10월에는 검색 노출을 점검했다. 구글 검색 콘솔에서 색인된 페이지는 186개, 제외된 페이지는 704개였다. 사이트맵 주소 1,184개 가운데 125개가 기사 없는 대학 페이지로 이어졌다. 사이트맵과 페이지 정보를 고친 뒤, 11월 20일 색인된 페이지는 9,120개로 늘었다.</p>
 
-<h2 id="corrections" style="margin: 2.75rem 0 0.5rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">정정과 후속</h2>
-<p style="font-family: 'Pretendard', sans-serif; font-size: 15px; color: #5A5A5A">틀린 것은 지우지 않고 그었다.</p>
 </article>
 
 <aside class="s4" style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 2.5rem">
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">숫자로 본 허브</p>
 <div style="display: flex; flex-direction: column; gap: 1rem">
 <div><div style="font-family: 'Pretendard', sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; font-size: 2.1rem; font-weight: 500">853,627</div><div style="font-size: 13px; color: #5A5A5A">모은 기사 (국문 최신 750,813건)</div></div>
@@ -94,12 +96,7 @@ img{max-width:100%}
 <p style="margin: 1rem 0 0; font-size: 12px; line-height: 1.5; color: #5A5A5A">출처: 구글 검색 콘솔. 클릭·노출은 2026년 10월 5일~11월 18일, 색인은 11월 20일 기준</p>
 </div>
 
-<figure style="margin: 0">
-<img src="img/hub-issues.jpg" alt="'여러 대학이 다룬 이슈' 화면. 이슈마다 보도한 대학과 기사가 묶여 있다" width="1176" height="960" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD">
-<figcaption style="margin-top: 0.5rem; font-size: 12px; color: #5A5A5A">'여러 대학이 다룬 이슈' 화면. 대학 세 곳 이상의 언론이 같은 사안을 보도하면 기사를 한데 묶는다.</figcaption>
-</figure>
-
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">크레딧</p>
 <dl style="margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.55rem 1.25rem; font-size: 14px; line-height: 1.5">
 <dt style="font-weight: 700">기획·편집 판단</dt><dd style="margin: 0">황치웅</dd>
@@ -111,7 +108,9 @@ img{max-width:100%}
 </div>
 </aside>
 
-<section class="s12" aria-labelledby="corrections" style="margin-top: 0.5rem; border-top: 1px solid #141414">
+<section class="s12" aria-labelledby="corrections" style="margin-top: 2.5rem; border-top: 2px solid #141414; padding-top: 1.25rem">
+<h2 id="corrections" style="margin: 0 0 0.5rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">정정과 후속</h2>
+<p style="font-family: 'Pretendard', sans-serif; font-size: 15px; color: #5A5A5A">틀린 것은 지우지 않고 그었다.</p>
 <div class="three" style="gap: 2.5rem; padding-top: 1.5rem">
 
 <div>
@@ -138,7 +137,7 @@ img{max-width:100%}
 </div>
 </section>
 
-<nav class="s12" aria-label="다른 기사" style="margin-top: 3.5rem; border-top: 4px solid #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem">
+<nav class="s12" aria-label="다른 기사" style="margin-top: 3.5rem; border-top: 2px solid #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem">
 <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">1면으로</a>
 <a href="network.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">다음 기사 — 대언넷 홈페이지 개편</a>
 </nav>
@@ -146,5 +145,10 @@ img{max-width:100%}
 </div>
 </div>
 </div>
+<footer class="wrap" style="font-family: 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">
+<div style="border-top: 6px double #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem">
+<span>발행 황치웅</span><span>최종 갱신 2026년 11월 20일</span><span>기획·편집 황치웅 · 구현 Claude · 원고 다듬기 agy</span><span>GitHub Pages에서 발행</span>
+</div>
+</footer>
 </body>
 </html>

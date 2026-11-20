@@ -7,7 +7,7 @@ EN = {
 "2026년 11월 20일 금요일": "Friday, November 20, 2026",
 "제1호 · 작업물 2건": "No. 1 · 2 projects",
 "황치웅": "Chiwoong Hwang",
-"취재하던 사람이 만든 것들의 기록입니다. 기획과 판단, 검증은 제가 하고 코드는 AI가 씁니다. 누가 무엇을 맡았는지는 기사마다 크레딧으로 밝혔습니다.": "A record of what a former reporter built. I do the planning, the judgment calls and the checking; AI writes the code. Each story ends with credits that say who did what.",
+"취재하던 사람이 만든 것들의 기록입니다. 기획과 판단, 검증은 제가 하고 코드는 AI가 씁니다. 누가 무엇을 맡았는지는 기사마다 크레딧으로 밝혔습니다.": "A record of what a former reporter built. I do the planning, the judgment calls and the checking; AI writes the code. Every story credits who did what.",
 "주요 메뉴": "Main menu",
 "대학언론 허브": "Campus Press Hub",
 "대언넷 홈페이지": "Network website",
@@ -177,6 +177,10 @@ EN = {
 "조선대학교 일본어학과 졸업 (정치외교학 복수전공, 2015–2021), 〈조대신문〉 대학부 기자·통신원": "B.A. in Japanese, Chosun University (double major in political science, 2015–2021); campus-news reporter and correspondent at Jodae Sinmun",
 "대학알리 프로젝트 매니저 (2020.12–2022.2)": "Project manager, Daehak Alli (Dec. 2020–Feb. 2022)",
 "시즈오카대학 교환학생 (2017.9–2018.9), 일본 워킹홀리데이 (2024.11–2025.9) · JLPT N1 (2018)": "Exchange student at Shizuoka University (Sept. 2017–Sept. 2018); working holiday in Japan (Nov. 2024–Sept. 2025) · JLPT N1 (2018)",
+"발행 황치웅": "Published by Chiwoong Hwang",
+"최종 갱신 2026년 11월 20일": "Last updated November 20, 2026",
+"기획·편집 황치웅 · 구현 Claude · 원고 다듬기 agy": "Planning and editing: Chiwoong Hwang · Built by Claude · Copy edited by agy",
+"GitHub Pages에서 발행": "Hosted on GitHub Pages",
 }
 
 JA = {
@@ -186,7 +190,7 @@ JA = {
 "제1호 · 작업물 2건": "第1号・作品2件",
 "황치웅": "ファン・チウン",
 "취재하던 사람이 만든 것들의 기록입니다. 기획と판단, 검증은 제가 하고 코드는 AI가 씁니다. 누가 무엇을 맡았는지는 기사마다 크레딧으로 밝혔습니다.": "",
-"취재하던 사람이 만든 것들의 기록입니다. 기획과 판단, 검증은 제가 하고 코드는 AI가 씁니다. 누가 무엇을 맡았는지는 기사마다 크레딧으로 밝혔습니다.": "取材をしていた人間がつくったものの記録です。企画と判断、検証は私が行い、コードはAIが書きます。誰が何をしたかは、各記事の最後にクレジットとして記しました。",
+"취재하던 사람이 만든 것들의 기록입니다. 기획과 판단, 검증은 제가 하고 코드는 AI가 씁니다. 누가 무엇을 맡았는지는 기사마다 크레딧으로 밝혔습니다.": "取材をしていた人間がつくったものの記録です。企画と判断、検証は私が行い、コードはAIが書きます。誰が何を担ったかは、記事ごとにクレジットで示しました。",
 "주요 메뉴": "メインメニュー",
 "대학언론 허브": "Campus Press Hub",
 "대언넷 홈페이지": "ネットワークのサイト",
@@ -356,5 +360,9 @@ JA = {
 "조선대학교 일본어학과 졸업 (정치외교학 복수전공, 2015–2021), 〈조대신문〉 대학부 기자·통신원": "朝鮮大学校 日本語学科卒業（政治外交学 複数専攻、2015–2021）、『朝大新聞』大学部記者・通信員",
 "대학알리 프로젝트 매니저 (2020.12–2022.2)": "大学アリ プロジェクトマネージャー（2020年12月–2022年2月）",
 "시즈오카대학 교환학생 (2017.9–2018.9), 일본 워킹홀리데이 (2024.11–2025.9) · JLPT N1 (2018)": "静岡大学に交換留学（2017年9月–2018年9月）、日本でワーキングホリデー（2024年11月–2025年9月）・JLPT N1（2018年）",
+"발행 황치웅": "発行 ファン・チウン",
+"최종 갱신 2026년 11월 20일": "最終更新 2026年11月20日",
+"기획·편집 황치웅 · 구현 Claude · 원고 다듬기 agy": "企画・編集 ファン・チウン・実装 Claude・原稿の推敲 agy",
+"GitHub Pages에서 발행": "GitHub Pages で発行",
 }
 JA.pop("취재하던 사람이 만든 것들의 기록입니다. 기획と판단, 검증은 제가 하고 코드는 AI가 씁니다. 누가 무엇을 했는지는 기사마다 끝에 크레딧으로 밝혔습니다.", None)

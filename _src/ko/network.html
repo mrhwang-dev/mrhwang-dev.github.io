@@ -13,7 +13,7 @@
 @font-face{font-family:'Pretendard';src:url(fonts/PretendardVariable.woff2) format('woff2');font-weight:45 920;font-style:normal;font-display:swap}
 @font-face{font-family:'ChosunilboNM';src:url(fonts/ChosunilboNM.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
 body{margin:0;background:#ffffff;word-break:keep-all;overflow-wrap:break-word}
-a{color:#141414}a:hover{color:#B3121F}
+a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:#BBBBBB}a:hover{color:#B3121F;text-decoration-color:currentColor}
 .wrap{max-width:1240px;margin:0 auto;padding:0 2.5rem;box-sizing:border-box}
 .cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:2.5rem}
 .s8{grid-column:span 8}.s4{grid-column:span 4}.s12{grid-column:span 12}
@@ -57,11 +57,11 @@ img{max-width:100%}
 
 <div class="s12 pair" style="margin-top: 2.5rem">
 <figure style="margin: 0">
-<img src="img/net-home.jpg" alt="대학언론인 네트워크 홈페이지 첫 화면. 큰 행사 사진과 최근 활동 목록이 보인다" width="1115" height="610" loading="eager" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD">
+<img src="img/net-home.jpg" alt="대학언론인 네트워크 홈페이지 첫 화면. 큰 행사 사진과 최근 활동 목록이 보인다" width="1115" height="610" loading="eager" style="display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; border: 1px solid #DDDDDD">
 <figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">univjournalist.network 홈 화면, 2026년 11월 20일. 갈무리 = 황치웅</figcaption>
 </figure>
 <figure style="margin: 0">
-<img src="img/conference-2026.jpg" alt="2026 대학언론인 콘퍼런스 '도약'에서 패널들이 무대에 앉아 이야기하는 모습" width="1344" height="896" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD">
+<img src="img/conference-2026.jpg" alt="2026 대학언론인 콘퍼런스 '도약'에서 패널들이 무대에 앉아 이야기하는 모습" width="1344" height="896" loading="lazy" style="display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; border: 1px solid #DDDDDD">
 <figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">2026 대학언론인 콘퍼런스 '도약'. 홈페이지 사진은 모두 단체가 직접 찍었다. 사진 = 대학언론인 네트워크</figcaption>
 </figure>
 </div>
@@ -88,7 +88,7 @@ img{max-width:100%}
 </article>
 
 <aside class="s4" style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 2.5rem">
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">이 단체와 나</p>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 14px; line-height: 1.6">
 <li><span style="font-family: 'Pretendard', sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; font-weight: 500">2021–2022</span><br>의장. 아카데미 시그니처 코스 1·2기, MBC 엠빅뉴스 공동취재, 쿠키뉴스 대선 후보 검증을 맡았다.</li>
@@ -97,7 +97,7 @@ img{max-width:100%}
 </ul>
 </div>
 
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">홈페이지가 소개하는 일</p>
 <ul style="margin: 0; padding: 0 0 0 1.1rem; font-size: 14px; line-height: 1.75">
 <li>대학언론인 콘퍼런스 (평균 100여 명)</li>
@@ -111,7 +111,7 @@ img{max-width:100%}
 <p style="margin: 0.75rem 0 0; font-size: 12px; color: #5A5A5A">출처: univjournalist.network, 2026년 11월 20일 확인</p>
 </div>
 
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">크레딧</p>
 <dl style="margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.55rem 1.25rem; font-size: 14px; line-height: 1.5">
 <dt style="font-weight: 700">기획·편집 판단</dt><dd style="margin: 0">황치웅</dd>
@@ -123,7 +123,7 @@ img{max-width:100%}
 </div>
 </aside>
 
-<nav class="s12" aria-label="다른 기사" style="margin-top: 3.5rem; border-top: 4px solid #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem">
+<nav class="s12" aria-label="다른 기사" style="margin-top: 3.5rem; border-top: 2px solid #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem">
 <a href="hub.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">이전 기사 — 대학언론 허브</a>
 <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">1면으로</a>
 </nav>
@@ -131,5 +131,10 @@ img{max-width:100%}
 </div>
 </div>
 </div>
+<footer class="wrap" style="font-family: 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">
+<div style="border-top: 6px double #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem">
+<span>발행 황치웅</span><span>최종 갱신 2026년 11월 20일</span><span>기획·편집 황치웅 · 구현 Claude · 원고 다듬기 agy</span><span>GitHub Pages에서 발행</span>
+</div>
+</footer>
 </body>
 </html>

@@ -18,7 +18,7 @@
 @font-face{font-family:'Pretendard';src:url(../fonts/PretendardVariable.woff2) format('woff2');font-weight:45 920;font-style:normal;font-display:swap}
 @font-face{font-family:'ChosunilboNM';src:url(../fonts/ChosunilboNM.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
 body{margin:0;background:#ffffff;word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere}
-a{color:#141414}a:hover{color:#B3121F}
+a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:#BBBBBB}a:hover{color:#B3121F;text-decoration-color:currentColor}
 .wrap{max-width:1240px;margin:0 auto;padding:0 2.5rem;box-sizing:border-box}
 .cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:2.5rem}
 .s8{grid-column:span 8}.s4{grid-column:span 4}.s12{grid-column:span 12}
@@ -35,6 +35,7 @@ a{color:#141414}a:hover{color:#B3121F}
 
 *{box-sizing:border-box}
 img{max-width:100%}
+@media (min-width:821px){.hlead{font-size:2.6rem!important}}
 </style>
 </head>
 <body>
@@ -62,11 +63,11 @@ img{max-width:100%}
 
 <div class="s12 pair" style="margin-top: 2.5rem">
 <figure style="margin: 0">
-<img src="../img/net-home.jpg" alt="大学ジャーナリスト・ネットワークのトップ画面。大きな行事の写真と最近の活動一覧が見える" width="1115" height="610" loading="eager" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD">
+<img src="../img/net-home.jpg" alt="大学ジャーナリスト・ネットワークのトップ画面。大きな行事の写真と最近の活動一覧が見える" width="1115" height="610" loading="eager" style="display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; border: 1px solid #DDDDDD">
 <figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">univjournalist.network のトップ画面、2026年11月20日。画面キャプチャ＝ファン・チウン</figcaption>
 </figure>
 <figure style="margin: 0">
-<img src="../img/conference-2026.jpg" alt="2026年の大学ジャーナリスト・カンファレンス「跳躍」で、壇上に並んで話すパネリストたち" width="1344" height="896" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD">
+<img src="../img/conference-2026.jpg" alt="2026年の大学ジャーナリスト・カンファレンス「跳躍」で、壇上に並んで話すパネリストたち" width="1344" height="896" loading="lazy" style="display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; border: 1px solid #DDDDDD">
 <figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">2026年 大学ジャーナリスト・カンファレンス「跳躍」。サイトの写真はすべて団体が自ら撮影した。写真＝大学ジャーナリスト・ネットワーク</figcaption>
 </figure>
 </div>
@@ -93,7 +94,7 @@ img{max-width:100%}
 </article>
 
 <aside class="s4" style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 2.5rem">
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">この団体と私</p>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 14px; line-height: 1.6">
 <li><span style="font-family: 'PretendardJP', 'Pretendard', sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; font-weight: 500">2021–2022</span><br>議長。アカデミーのシグネチャーコース1・2期、MBC「エムビックニュース」との共同取材、クッキーニュースとの大統領候補検証を担当した。</li>
@@ -102,7 +103,7 @@ img{max-width:100%}
 </ul>
 </div>
 
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">サイトが紹介している事業</p>
 <ul style="margin: 0; padding: 0 0 0 1.1rem; font-size: 14px; line-height: 1.75">
 <li>大学ジャーナリスト・カンファレンス（平均100人ほど）</li>
@@ -116,7 +117,7 @@ img{max-width:100%}
 <p style="margin: 0.75rem 0 0; font-size: 12px; color: #5A5A5A">出典：univjournalist.network、2026年11月20日に確認</p>
 </div>
 
-<div style="border-top: 4px solid #141414; padding-top: 1rem">
+<div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">クレジット</p>
 <dl style="margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.55rem 1.25rem; font-size: 14px; line-height: 1.5">
 <dt style="font-weight: 700">企画・編集判断</dt><dd style="margin: 0">ファン・チウン</dd>
@@ -128,7 +129,7 @@ img{max-width:100%}
 </div>
 </aside>
 
-<nav class="s12" aria-label="ほかの記事" style="margin-top: 3.5rem; border-top: 4px solid #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem">
+<nav class="s12" aria-label="ほかの記事" style="margin-top: 3.5rem; border-top: 2px solid #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem">
 <a href="hub.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">前の記事 ― Campus Press Hub</a>
 <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">1面へ</a>
 </nav>
@@ -136,5 +137,10 @@ img{max-width:100%}
 </div>
 </div>
 </div>
+<footer class="wrap" style="font-family: 'PretendardJP', 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">
+<div style="border-top: 6px double #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem">
+<span>発行 ファン・チウン</span><span>最終更新 2026年11月20日</span><span>企画・編集 ファン・チウン・実装 Claude・原稿の推敲 agy</span><span>GitHub Pages で発行</span>
+</div>
+</footer>
 </body>
 </html>

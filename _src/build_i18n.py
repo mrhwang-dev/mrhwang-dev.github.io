@@ -64,6 +64,7 @@ def build(page, src):
             s = s.replace("'Pretendard', sans-serif", "'PretendardJP', 'Pretendard', sans-serif")
             s = s.replace("'ChosunilboNM', serif", "'ShipporiB1', 'ChosunilboNM', serif")
             s = s.replace('word-break:keep-all;overflow-wrap:break-word', 'word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere')
+            s = s.replace('</style>', '@media (min-width:821px){.hlead{font-size:2.6rem!important}}\n</style>', 1)
         s = s.replace('{{LANG}}', lang_links(code, page)).replace('{{ALT}}', alternates(page))
         if code != 'ko':
             left = [m for m in HANGUL.findall(re.sub(r'<a [^>]*lang="ko"[^>]*>한국어</a>', '', s))]

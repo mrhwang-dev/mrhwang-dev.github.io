@@ -16,13 +16,14 @@
 @font-face{font-family:'Pretendard';src:url(../fonts/PretendardVariable.woff2) format('woff2');font-weight:45 920;font-style:normal;font-display:swap}
 @font-face{font-family:'ChosunilboNM';src:url(../fonts/ChosunilboNM.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
 body{margin:0;background:#ffffff;word-break:keep-all;overflow-wrap:break-word}
-a{color:#141414}a:hover{color:#B3121F}
+a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:#BBBBBB}a:hover{color:#B3121F;text-decoration-color:currentColor}
 .wrap{max-width:1240px;margin:0 auto;padding:0 2.5rem;box-sizing:border-box}
 .cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:2.5rem}
 .s8{grid-column:span 8}.s4{grid-column:span 4}.s6{grid-column:span 6}.s12{grid-column:span 12}
 .nav a{text-decoration:none}.nav a:hover{text-decoration:underline}
 .rule-l{border-left:1px solid #141414;padding-left:2.5rem}
 .body2{column-count:2;column-gap:2rem}
+.body2 p{orphans:3;widows:3}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
 @media (max-width:820px){
 .wrap{padding:0 1.25rem}
@@ -33,6 +34,7 @@ a{color:#141414}a:hover{color:#B3121F}
 .mast{font-size:3.4rem!important}
 .hlead{font-size:2.1rem!important}
 .stats{grid-template-columns:minmax(0,1fr)}
+.stats>div{padding:1rem 0!important}
 }
 
 *{box-sizing:border-box}
@@ -49,9 +51,9 @@ img{max-width:100%}
 <span>No. 1 · 2 projects</span>
 <span class="langs"><a href="../index.html" lang="ko" hreflang="ko">한국어</a> · <a href="../en/index.html" lang="en" hreflang="en" aria-current="page">English</a> · <a href="../ja/index.html" lang="ja" hreflang="ja">日本語</a></span>
 </div>
-<div style="border-top: 4px solid #141414; border-bottom: 1px solid #141414; padding: 1.75rem 0 1.5rem; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1rem 3rem">
+<div style="border-top: 6px double #141414; border-bottom: 1px solid #141414; padding: 1.75rem 0 1.5rem; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1rem 3rem">
 <h1 class="mast" style="margin: 0; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 5.75rem; line-height: 1; letter-spacing: -0.045em">Chiwoong Hwang</h1>
-<p style="margin: 0; max-width: 31rem; font-size: 15px; line-height: 1.7">A record of what a former reporter built. I do the planning, the judgment calls and the checking; AI writes the code. Each story ends with credits that say who did what.</p>
+<p style="margin: 0; max-width: 31rem; font-size: 15px; line-height: 1.7">A record of what a former reporter built. I do the planning, the judgment calls and the checking; AI writes the code. Every story credits who did what.</p>
 </div>
 <nav class="nav" aria-label="Main menu" style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; font-size: 14px; font-weight: 600; padding: 0.8rem 0; border-bottom: 1px solid #141414">
 <a href="hub.html">Campus Press Hub</a>
@@ -95,7 +97,7 @@ img{max-width:100%}
 <p style="margin: 0 0 1rem; font-family: 'Pretendard', sans-serif; font-size: 16px; line-height: 1.8">I rebuilt the website of a nonprofit, founded in 2020, that supports student journalists, and it went live on November 19. Staff who don&#x27;t code can now edit its text and settings themselves.</p>
 <a href="network.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 700">Read the full story</a>
 
-<div style="margin-top: 2.5rem; border-top: 4px solid #141414; padding-top: 1rem">
+<div style="margin-top: 2.5rem; border-top: 2px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; color: #B3121F">Corrections in this issue</p>
 <p style="margin: 0 0 0.4rem; font-size: 14px; line-height: 1.6"><del style="color: #5A5A5A">Automated checks on every push</del></p>
 <p style="margin: 0 0 0.75rem; font-size: 14px; line-height: 1.6"><ins style="text-decoration: none; font-weight: 600">Checks only on pull requests or manual runs</ins></p>
@@ -103,7 +105,7 @@ img{max-width:100%}
 </div>
 </aside>
 
-<section id="method" class="s6" style="border-top: 4px solid #141414; padding-top: 1.25rem; margin-top: 1.5rem">
+<section id="method" class="s6" style="border-top: 2px solid #141414; padding-top: 1.25rem; margin-top: 1.5rem">
 <h2 style="margin: 0 0 1rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.6rem">How I write credits</h2>
 <p style="margin: 0 0 1.25rem; font-family: 'Pretendard', sans-serif; font-size: 16px; line-height: 1.8">The way a news story credits its reporter and photographer, I credit each role on every project. I don&#x27;t write code myself. I decide what to build, then use the result myself to check that it works as intended.</p>
 <dl style="margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.6rem 1.5rem; font-size: 15px; line-height: 1.5">
@@ -114,7 +116,7 @@ img{max-width:100%}
 </dl>
 </section>
 
-<section id="profile" class="s6" style="border-top: 4px solid #141414; padding-top: 1.25rem; margin-top: 1.5rem">
+<section id="profile" class="s6" style="border-top: 2px solid #141414; padding-top: 1.25rem; margin-top: 1.5rem">
 <h2 style="margin: 0 0 1rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.6rem">About me</h2>
 <ul style="margin: 0 0 1.25rem; padding: 0; list-style: none; font-size: 15px; line-height: 1.6; display: flex; flex-direction: column; gap: 0.7rem">
 <li>B.A. in Japanese, Chosun University (double major in political science, 2015–2021); campus-news reporter and correspondent at Jodae Sinmun</li>
@@ -127,7 +129,7 @@ img{max-width:100%}
 <p style="margin: 0; font-size: 15px; font-weight: 600">Contact <a href="mailto:facti301@gmail.com">facti301@gmail.com</a> · <a href="https://www.linkedin.com/in/chiwoong-h-a4b833171/">LinkedIn</a></p>
 </section>
 
-<section id="press" class="s12" style="border-top: 4px solid #141414; padding-top: 1.25rem; margin-top: 2rem">
+<section id="press" class="s12" style="border-top: 2px solid #141414; padding-top: 1.25rem; margin-top: 2rem">
 <h2 style="margin: 0 0 0.5rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.6rem">In the press</h2>
 <ol style="margin: 0; padding: 0; list-style: none">
 <li style="display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.25rem 1.5rem; padding: 0.9rem 0; border-top: 1px solid #DDDDDD"><span style="font-size: 13px; color: #5A5A5A">Nov. 2015<br>UNN (Korea University Newspaper)</span><span><a href="http://news.unn.net/news/articleView.html?idxno=153763" style="font-weight: 600">“Thousands of copies of Chosun University paper that exposed student-council corruption disappear” (in Korean)</a><br><span style="font-size: 14px; color: #5A5A5A">Coverage of my first-year story on student-council corruption and of the paper&#x27;s disappearance.</span></span></li>
@@ -141,5 +143,10 @@ img{max-width:100%}
 </main>
 </div>
 </div>
+<footer class="wrap" style="font-family: 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">
+<div style="border-top: 6px double #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem">
+<span>Published by Chiwoong Hwang</span><span>Last updated November 20, 2026</span><span>Planning and editing: Chiwoong Hwang · Built by Claude · Copy edited by agy</span><span>Hosted on GitHub Pages</span>
+</div>
+</footer>
 </body>
 </html>
