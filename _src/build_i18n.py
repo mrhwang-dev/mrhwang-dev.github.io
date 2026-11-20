@@ -130,7 +130,7 @@ for page in PAGES:
 css = open(os.path.join(ROOT, 'style.css'), encoding='utf-8').read()
 ja = JA_FONTS.replace('url(../fonts/', 'url(fonts/') + css
 ja = ja.replace(":root{--sans:'Pretendard',sans-serif;--serif:'ChosunilboNM',serif}", ":root{--sans:'PretendardJP','Pretendard',sans-serif;--serif:'ShipporiB1','ChosunilboNM',serif}")
-ja = ja.replace("'Pretendard',sans-serif", "'PretendardJP','Pretendard',sans-serif")
+ja = ja.replace("'Pretendard',sans-serif", "'PretendardJP','Pretendard',sans-serif").replace("'PretendardJP','PretendardJP'", "'PretendardJP'")
 ja = ja.replace('word-break:keep-all;overflow-wrap:break-word', 'word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere')
 ja += '@media (min-width:821px){.hlead{font-size:2.6rem!important}}\n@media (max-width:820px){.mast{white-space:nowrap;font-size:clamp(2.25rem,11vw,3.4rem)!important}}\n'
 open(os.path.join(ROOT, 'style-ja.css'), 'w', encoding='utf-8').write(ja)
