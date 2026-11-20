@@ -91,7 +91,7 @@ def build(page, src):
         s = share_tags(s, code, page)
         if code != 'ko':
             s = s.replace('<html lang="ko">', f'<html lang="{code}">')
-            s = re.sub(r'(src|href)="(img|fonts)/', r'\1="../\2/', s)
+            s = re.sub(r'(src|href|srcset)="(img|fonts)/', r'\1="../\2/', s)
             s = s.replace('url(fonts/', 'url(../fonts/')
         if code == 'ja':
             s = s.replace('<style>\n', '<style>\n' + JA_FONTS, 1)
