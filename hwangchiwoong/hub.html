@@ -23,7 +23,8 @@ a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-dec
 .body p{margin:0 0 1.1rem}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
-.nav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
+.langs a[aria-current="page"]{color:#141414;font-weight:700;text-decoration:none}
+.nav > a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
 figcaption,p{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
 ::selection{background:#141414;color:#ffffff}
@@ -31,7 +32,7 @@ h1,h2,h3{text-wrap:balance}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-9999px;top:0}.skip:focus{left:1rem;top:1rem;z-index:10;background:#ffffff;padding:.5rem 1rem;font-family:'Pretendard',sans-serif}
 @media (max-width:820px){
-.nav a,.langs a{display:inline-flex;align-items:center;min-height:44px}
+.nav a,.langs a,.meta a{display:inline-flex;align-items:center;min-height:44px}
 .nav{row-gap:0!important}
 .wrap{padding:0 1.25rem}
 .cols{grid-template-columns:minmax(0,1fr);row-gap:2rem}
@@ -59,7 +60,7 @@ img{max-width:100%}
 </nav>
 </header>
 
-<div class="cols" style="padding-top: 3rem">
+<main id="main" class="cols" style="padding-top: 3rem">
 
 <div class="s12" style="max-width: 920px">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">작업물 1 · 대학언론 허브 · 운영 중</p>
@@ -69,22 +70,22 @@ img{max-width:100%}
 </div>
 
 <figure class="s12" style="margin: 2.5rem 0 0">
-<a href="img/hub-home.jpg" aria-label="원본 크기로 보기"><img src="img/hub-home.jpg" alt="대학언론 허브 홈 화면. 에디터픽, 많이 다룬 이슈, 최신 기사 목록이 보인다" width="1115" height="690" loading="eager" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></a>
+<a href="img/hub-home.jpg"><img src="img/hub-home.jpg" alt="대학언론 허브 홈 화면. 에디터픽, 많이 다룬 이슈, 최신 기사 목록이 보인다" width="1115" height="690" loading="eager" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></a>
 <figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">홈 화면. 위에서부터 에디터픽, 많이 다룬 이슈, 최신 기사. <span style="white-space:nowrap">갈무리 = 황치웅</span></figcaption>
 </figure>
 
-<article id="main" class="s8 body" style="margin-top: 2.5rem; font-family: 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
-<p><strong style="font-family: 'Pretendard', sans-serif">서울</strong> — 대학 학보와 방송국, 교지, 영자신문 기사는 학교마다 다른 홈페이지에 흩어져 있다. 등록금 인상이나 학생회 선거처럼 여러 학교가 같은 시기에 겪는 일도, 다른 학교 학보가 어떻게 썼는지 보려면 사이트를 하나씩 열어야 했다. 〈조대신문〉 편집실에는 다른 대학 신문이 매주 무더기로 배송돼 왔다. 쓰레기처럼 쌓여서, 그걸 버리는 당번이 따로 있을 정도였다.</p>
+<article class="s8 body" style="margin-top: 2.5rem; font-family: 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
+<p><strong style="font-family: 'Pretendard', sans-serif">서울</strong> — 대학 학보와 방송국, 교지, 영자신문 기사는 학교마다 다른 홈페이지에 흩어져 있다. 등록금 인상이나 학생회 선거처럼 여러 학교가 같은 시기에 겪는 일도, 다른 학교 학보가 어떻게 썼는지 보려면 사이트를 하나씩 열어야 했다. 종이 신문도 사정은 비슷했다. 〈조대신문〉 편집실에는 다른 대학 신문이 매주 무더기로 배송돼 왔지만, 쓰레기처럼 쌓여 버리는 당번이 따로 있을 정도였다.</p>
 <p>대학언론 허브는 이 기사들을 한곳에서 검색하는 서비스다. 분야(대학·사회·문화·학술·사람·여론·방송)와 언론 유형, 기간, 형식(기사·영상·PDF·지면)으로 기사를 거른다. 관심 대학은 세 곳까지 골라 모아 볼 수 있다. 영문 기사도 따로 검색된다.</p>
 
 <figure style="margin: 2rem 0 1.5rem">
-<a href="img/hub-issues.jpg" aria-label="원본 크기로 보기"><img src="img/hub-issues.jpg" alt="'여러 대학이 다룬 이슈' 화면. 이슈마다 보도한 대학과 기사가 묶여 있다" width="1176" height="960" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></a>
+<a href="img/hub-issues.jpg"><img src="img/hub-issues.jpg" alt="'여러 대학이 다룬 이슈' 화면. 이슈마다 보도한 대학과 기사가 묶여 있다" width="1176" height="960" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></a>
 <figcaption style="margin-top: 0.5rem; font-size: 12px; color: #5A5A5A">'여러 대학이 다룬 이슈' 화면. 대학 세 곳 이상의 언론이 같은 사안을 보도하면 기사를 한데 묶는다.</figcaption>
 </figure>
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">편집 판단 4가지</h2>
 <p><strong>하나, 전문을 싣지 않는다.</strong> 기사 전문은 복제하지 않고 원문으로 잇는다. 수집 원칙과 운영 투명성 보고서를 공개하고, 각 언론이 정정이나 수집 제외를 요청할 창구를 따로 뒀다.</p>
 <p style="font-family: 'Pretendard', sans-serif; font-size: 15px">공개 문서: <a href="https://campuspress.kr/collection-policy">수집 원칙</a> · <a href="https://campuspress.kr/transparency">운영 투명성 보고서</a> · <a href="https://campuspress.kr/corrections">정정·수집 제외 요청</a></p>
-<p><strong>둘, 처음 시안을 버렸다.</strong> 다른 AI 도구가 만든 '대자보 편집실' 콘셉트가 독자에게 맞지 않는다고 판단했다. 디자인은 처음부터 다시 잡았다. 이 과정에서 기사 저장 기능과 '우리 대학'이라는 표현을 뺐다. 둘 다 독자가 쓰지 않는다고 봤다.</p>
+<p><strong>둘, 처음 시안을 버렸다.</strong> 다른 AI 도구가 만든 '대자보 편집실' 콘셉트가 독자에게 맞지 않는다고 판단했다. 디자인은 처음부터 다시 잡았다. 이 과정에서 기사 저장 기능과 '우리 대학'이라는 표현을 뺐다. 둘 다 독자에게 필요 없다고 봤다.</p>
 <p><strong>셋, 관리자 화면은 예쁠 필요가 없다.</strong> 운영진이 쓰는 '행정실' 화면은 독자 화면과 디자인 틀은 맞추되, 꾸밈보다 처리 속도를 우선하도록 주문했다. 번역·공공데이터·알림 같은 외부 연결이 살아 있는지도 한 화면에서 확인하도록 했다.</p>
 <p><strong>넷, AI가 쓴 글은 AI가 썼다고 적는다.</strong> 월간 브리핑은 AI가 쓴다. 메뉴 이름부터 'AI가 쓴 글'이라고 밝혀 기자가 쓴 기사와 섞이지 않게 했다.</p>
 
@@ -128,21 +129,21 @@ img{max-width:100%}
 <div>
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">정정 1 · 2026년 10월</p>
 <p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">고치기 전: </span>저장소에 올릴 때마다 자동 검사</del></p>
-<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600">검토 요청과 수동 실행 때만 검사</p>
+<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600"><ins style="text-decoration: none"><span class="sr">고친 뒤: </span>검토 요청과 수동 실행 때만 검사</ins></p>
 <p style="margin: 0; font-family: 'Pretendard', sans-serif; font-size: 15px; line-height: 1.8">작업 기록을 고칠 때마다 8분짜리 검사가 실행됐다. 이틀 새 248번 작동해 한 달 치 사용량 2,000분이 바닥났다. 기록을 뒤져 원인을 찾고 실행 조건을 바꿨다.</p>
 </div>
 
 <div>
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">정정 2 · 2026년 10월</p>
 <p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">고치기 전: </span>정정 요청에 10일 안에 답한다</del></p>
-<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600">요청이 들어오면 운영자에게 바로 알림 메일</p>
+<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600"><ins style="text-decoration: none"><span class="sr">고친 뒤: </span>요청이 들어오면 운영자에게 바로 알림 메일</ins></p>
 <p style="margin: 0; font-family: 'Pretendard', sans-serif; font-size: 15px; line-height: 1.8">정정 안내 페이지에서 10일 안에 답하겠다고 약속했다. 그런데 요청이 메일로 오지 않고 관리자 화면에만 쌓이고 있었다. 10월 14일부터는 요청이 저장되는 즉시 운영자에게 알림 메일이 간다. 요청자의 이름이나 내용은 메일에 넣지 않는다. 운영 투명성 보고서에 따르면 4분기에 들어온 정정 요청 3건은 모두 하루 안에 처리했다.</p>
 </div>
 
 <div>
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">후속 · 2026년 11월</p>
 <p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">고치기 전: </span>월 기본 요금 5달러 안에서 운영</del></p>
-<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600">대량 쓰기 전에 이번 달 남은 양부터 확인</p>
+<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600"><ins style="text-decoration: none"><span class="sr">고친 뒤: </span>대량 쓰기 전에 이번 달 남은 양부터 확인</ins></p>
 <p style="margin: 0; font-family: 'Pretendard', sans-serif; font-size: 15px; line-height: 1.8">10월 데이터베이스 쓰기가 기본 제공량 5,000만 행을 넘어 8,200만 행에 이르렀고, 추가 요금 33달러가 나왔다. 기사가 75만 건을 넘으면서 생긴 비용이다. 11월 1일부터 대량 작업은 이번 달 쓰기량과 예상량을 더해 포함량의 90%를 넘으면 시작하지 않는다. 아침 점검은 80%를 넘으면 경보를 낸다. 색인을 다시 채우느라 생기던 쓰기는 자체 검색 서비스로 옮겨 없앴다.</p>
 </div>
 
@@ -154,7 +155,7 @@ img{max-width:100%}
 <a href="network.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">다음 기사 — 대언넷 홈페이지 개편</a>
 </nav>
 
-</div>
+</main>
 </div>
 </div>
 <footer class="wrap" style="font-family: 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">

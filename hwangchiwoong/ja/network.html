@@ -9,8 +9,8 @@
 <link rel="alternate" hreflang="x-default" href="https://mrhwang-dev.github.io/hwangchiwoong/network.html">
 <title>生成画像ではなく現場の写真で、団体のサイトを建て直す ― ファン・チウン</title>
 <meta name="description" content="ファン・チウンのポートフォリオ。Campus Press Hub と大学ジャーナリスト・ネットワークのサイトを企画し、つくった記録。">
-<link rel="preload" href="../fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../fonts/ChosunilboNM.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/PretendardJP-subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/ShipporiMinchoB1-subset.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:'PretendardJP';src:url(../fonts/PretendardJP-subset.woff2) format('woff2');font-weight:45 920;font-style:normal;font-display:swap}
 @font-face{font-family:'ShipporiB1';src:url(../fonts/ShipporiMinchoB1-subset.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
@@ -24,7 +24,8 @@ a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-dec
 .nav a{text-decoration:none}.nav a:hover{text-decoration:underline}
 .body p{margin:0 0 1.1rem}
 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
-.nav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
+.langs a[aria-current="page"]{color:#141414;font-weight:700;text-decoration:none}
+.nav > a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
 figcaption,p{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
 ::selection{background:#141414;color:#ffffff}
@@ -32,7 +33,7 @@ h1,h2,h3{text-wrap:balance}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-9999px;top:0}.skip:focus{left:1rem;top:1rem;z-index:10;background:#ffffff;padding:.5rem 1rem;font-family:'Pretendard',sans-serif}
 @media (max-width:820px){
-.nav a,.langs a{display:inline-flex;align-items:center;min-height:44px}
+.nav a,.langs a,.meta a{display:inline-flex;align-items:center;min-height:44px}
 .nav{row-gap:0!important}
 .wrap{padding:0 1.25rem}
 .cols{grid-template-columns:minmax(0,1fr);row-gap:2rem}
@@ -62,18 +63,18 @@ img{max-width:100%}
 </nav>
 </header>
 
-<div class="cols" style="padding-top: 3rem">
+<main id="main" class="cols" style="padding-top: 3rem">
 
 <div class="s12" style="max-width: 920px">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">作品2・大学ジャーナリスト・ネットワークのサイト・運営中</p>
 <h1 class="hl" style="margin: 0; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 3.6rem; line-height: 1.2; letter-spacing: -0.035em">生成画像ではなく現場の写真で、団体のサイトを建て直す</h1>
 <p style="margin: 1.25rem 0 0; font-size: 1.25rem; line-height: 1.6; color: #333333">かつて議長を務めた学生メディア支援団体のサイトを改修した。団体が実際にしたことだけを見せ、コードを知らない運営メンバーでも自分で直せるようにした。</p>
-<p style="margin: 1.5rem 0 0; font-size: 14px; color: #5A5A5A">企画・編集 ファン・チウン・実装 Claude・2026年11月19日 正式公開・ <a href="https://univjournalist.network">univjournalist.network</a></p>
+<p style="margin: 1.5rem 0 0; font-size: 14px; color: #5A5A5A">企画・編集 ファン・チウン ／ 実装 Claude ／ 2026年11月19日 正式公開 ／  <a href="https://univjournalist.network">univjournalist.network</a></p>
 </div>
 
 <div class="s12 pair" style="margin-top: 2.5rem">
 <figure style="margin: 0">
-<img src="../img/net-home.jpg" alt="大学ジャーナリスト・ネットワークのトップ画面。大きな行事の写真と最近の活動一覧が見える" width="1115" height="610" loading="eager" style="display: block; width: 100%; height: auto; aspect-ratio: 1115 / 610; object-fit: cover; object-position: top; border: 1px solid #DDDDDD">
+<a href="../img/net-home.jpg"><img src="../img/net-home.jpg" alt="大学ジャーナリスト・ネットワークのトップ画面。大きな行事の写真と最近の活動一覧が見える" width="1115" height="610" loading="eager" style="display: block; width: 100%; height: auto; aspect-ratio: 1115 / 610; object-fit: cover; object-position: top; border: 1px solid #DDDDDD"></a>
 <figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">univjournalist.network のトップ画面、2026年11月20日。<span style="white-space:nowrap">画面キャプチャ＝ファン・チウン</span></figcaption>
 </figure>
 <figure style="margin: 0">
@@ -82,13 +83,13 @@ img{max-width:100%}
 </figure>
 </div>
 
-<article id="main" class="s8 body" style="margin-top: 2.5rem; font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
+<article class="s8 body" style="margin-top: 2.5rem; font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
 <p><strong style="font-family: 'PretendardJP', 'Pretendard', sans-serif">【ソウル】</strong> 大学ジャーナリスト・ネットワークは2020年3月に発足した非営利団体だ。毎年、韓国全土から学生記者100人ほどが集まるカンファレンスを開き、無料の実務講座（アカデミー）とアワードも運営している。学校が学生メディアを弾圧すれば対応チームを組み、編集権の侵害についての相談も受ける。</p>
 <p>サイトはこうした事業を知らせる窓口だ。ところが事業が増えても、サイトを直せる人は増えなかった。それまでサイトは外部のワンページ制作サービスで運営していた。ページを一つ増やすにも追加料金がかかると言われ、自分でつくることにした。</p>
 
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">編集判断3つ</h2>
 <p><strong>一、画像は生成しない。</strong> 生成画像は使わず、団体が行事で自ら撮った写真だけを使うことにした。ジャーナリストの団体のサイトなら、実際にあった場面だけを見せるべきだと考えた。</p>
-<p><strong>二、運営メンバーが自分で直す。</strong> お知らせを一行変えるにもコードを直さなければならない仕組みだった。文章と設定を Cloudflare のデータベースに移し、運営メンバーが管理画面からすぐ直せるようにした。直し方は実務ガイドブックに別にまとめた。</p>
+<p><strong>二、運営メンバーが自分で直す。</strong> 最初に自分でつくった版は、お知らせを一行変えるにもコードを直さなければならない仕組みだった。文章と設定を Cloudflare のデータベースに移し、運営メンバーが管理画面からすぐ直せるようにした。直し方は実務ガイドブックに別にまとめた。</p>
 <p><strong>三、人が替わっても残るようにする。</strong> 学生メディアの団体は毎年人が入れ替わる。コードのリポジトリを個人アカウントから団体のアカウントに移し、担当者が去ってもサイトが団体に残るようにした。</p>
 
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">公開</h2>
@@ -98,7 +99,7 @@ img{max-width:100%}
 <div style="font-family: 'PretendardJP', 'Pretendard', sans-serif">
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">続報・2026年11月19日</p>
 <p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">訂正前：</span>リポジトリに上げればすぐサイトに反映される</del></p>
-<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600">デプロイの連携を新たにつくり直した</p>
+<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600"><ins style="text-decoration: none"><span class="sr">訂正後：</span>デプロイの連携を新たにつくり直した</ins></p>
 </div>
 <p>デプロイの連携が切れていて、直した内容がサイトに反映されていなかった。リポジトリを団体のアカウントに移すのに合わせて Cloudflare にデプロイ用のプロジェクトを新たにつくってつなぎ直し、同じ日に正式サイトへ切り替えた。</p>
 </article>
@@ -119,7 +120,7 @@ img{max-width:100%}
 <li>大学ジャーナリスト・カンファレンス（100人ほど）</li>
 <li>大学ジャーナリスト・アカデミー</li>
 <li>大学ジャーナリスト・アワード</li>
-<li>学生メディアへの弾圧への対応</li>
+<li>学生メディア弾圧への対応</li>
 <li>編集権侵害の相談</li>
 <li>学生メディア・アーカイブ</li>
 <li>学生メディア発展基金</li>
@@ -144,12 +145,12 @@ img{max-width:100%}
 <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">1面へ</a>
 </nav>
 
-</div>
+</main>
 </div>
 </div>
 <footer class="wrap" style="font-family: 'PretendardJP', 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">
 <div style="border-top: 6px double #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem">
-<span>発行 ファン・チウン</span><span>最終更新 2026年11月20日</span><span>企画・編集 ファン・チウン・実装 Claude・原稿の推敲 agy</span><span>GitHub Pages で発行</span><span>連絡先 <a href="mailto:facti301@gmail.com">facti301@gmail.com</a></span>
+<span>発行 ファン・チウン</span><span>最終更新 2026年11月20日</span><span>企画・編集 ファン・チウン ／ 実装 Claude ／ 原稿の推敲 agy</span><span>GitHub Pages で発行</span><span>連絡先 <a href="mailto:facti301@gmail.com">facti301@gmail.com</a></span>
 </div>
 </footer>
 </body>

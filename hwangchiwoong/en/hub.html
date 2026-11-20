@@ -23,7 +23,8 @@ a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-dec
 .body p{margin:0 0 1.1rem}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
-.nav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
+.langs a[aria-current="page"]{color:#141414;font-weight:700;text-decoration:none}
+.nav > a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
 figcaption,p{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
 ::selection{background:#141414;color:#ffffff}
@@ -31,7 +32,7 @@ h1,h2,h3{text-wrap:balance}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-9999px;top:0}.skip:focus{left:1rem;top:1rem;z-index:10;background:#ffffff;padding:.5rem 1rem;font-family:'Pretendard',sans-serif}
 @media (max-width:820px){
-.nav a,.langs a{display:inline-flex;align-items:center;min-height:44px}
+.nav a,.langs a,.meta a{display:inline-flex;align-items:center;min-height:44px}
 .nav{row-gap:0!important}
 .wrap{padding:0 1.25rem}
 .cols{grid-template-columns:minmax(0,1fr);row-gap:2rem}
@@ -59,7 +60,7 @@ img{max-width:100%}
 </nav>
 </header>
 
-<div class="cols" style="padding-top: 3rem">
+<main id="main" class="cols" style="padding-top: 3rem">
 
 <div class="s12" style="max-width: 920px">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">Project 1 · Campus Press Hub · Live</p>
@@ -69,22 +70,22 @@ img{max-width:100%}
 </div>
 
 <figure class="s12" style="margin: 2.5rem 0 0">
-<a href="../img/hub-home.jpg" aria-label="View full size"><img src="../img/hub-home.jpg" alt="Campus Press Hub home page, showing editor&#x27;s picks, the most-covered issues and the latest stories" width="1115" height="690" loading="eager" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></a>
+<a href="../img/hub-home.jpg"><img src="../img/hub-home.jpg" alt="Campus Press Hub home page, showing editor&#x27;s picks, the most-covered issues and the latest stories" width="1115" height="690" loading="eager" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></a>
 <figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">Home page. From the top: editor&#x27;s picks, most-covered issues, latest stories. <span style="white-space:nowrap">Screenshot: Chiwoong Hwang</span></figcaption>
 </figure>
 
-<article id="main" class="s8 body" style="margin-top: 2.5rem; font-family: 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
-<p><strong style="font-family: 'Pretendard', sans-serif">SEOUL</strong> — Stories from Korea&#x27;s student newspapers, campus broadcasters, campus magazines and English-language papers sit on a different website for every school. Even for things many schools go through at once, like tuition hikes or student council elections, you had to open each site to see how another school&#x27;s paper covered it. At the Jodae Sinmun newsroom, other universities&#x27; papers arrived in heaps every week. They piled up like trash, so much that someone was on duty to throw them out.</p>
+<article class="s8 body" style="margin-top: 2.5rem; font-family: 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
+<p><strong style="font-family: 'Pretendard', sans-serif">SEOUL</strong> — Stories from Korea&#x27;s student newspapers, campus broadcasters, campus magazines and English-language papers sit on a different website for every school. Even for things many schools go through at once, like tuition hikes or student council elections, you had to open each site to see how another school&#x27;s paper covered it. Print was no better. At the Jodae Sinmun newsroom, other universities&#x27; papers arrived in heaps every week, only to pile up like trash; someone was even on duty to throw them out.</p>
 <p>Campus Press Hub lets readers find those stories in one place. They can filter by section (campus, society, culture, academia, people, opinion, broadcast), outlet type, date and format (article, video, PDF, print page), and follow up to three universities. English-language stories have their own search.</p>
 
 <figure style="margin: 2rem 0 1.5rem">
-<a href="../img/hub-issues.jpg" aria-label="View full size"><img src="../img/hub-issues.jpg" alt="The &quot;Issues covered by many universities&quot; page, grouping each issue with the schools and stories that covered it" width="1176" height="960" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></a>
+<a href="../img/hub-issues.jpg"><img src="../img/hub-issues.jpg" alt="The &quot;Issues covered by many universities&quot; page, grouping each issue with the schools and stories that covered it" width="1176" height="960" loading="lazy" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></a>
 <figcaption style="margin-top: 0.5rem; font-size: 12px; color: #5A5A5A">The &quot;Issues covered by many universities&quot; page. When outlets at three or more universities report the same story, the hub groups them together.</figcaption>
 </figure>
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">Four editorial calls</h2>
 <p><strong>One: no full-text republishing.</strong> The hub links to originals instead of copying them. It publishes its collection policy and a transparency report, and gives each outlet a channel to request corrections or removal.</p>
 <p style="font-family: 'Pretendard', sans-serif; font-size: 15px">Public documents: <a href="https://campuspress.kr/collection-policy">Collection policy</a> · <a href="https://campuspress.kr/transparency">Transparency report</a> · <a href="https://campuspress.kr/corrections">Corrections and removal requests</a></p>
-<p><strong>Two: I threw out the first design.</strong> Another AI tool produced a &quot;wall-poster newsroom&quot; concept. I judged it wrong for readers and had the design redone from scratch. While revising, I cut the save-article feature and the phrase &quot;my university.&quot; I judged that readers wouldn&#x27;t use either.</p>
+<p><strong>Two: I threw out the first design.</strong> Another AI tool produced a &quot;wall-poster newsroom&quot; concept. I judged it wrong for readers and had the design redone from scratch. While revising, I cut the save-article feature and the phrase &quot;my university.&quot; Readers didn&#x27;t need either.</p>
 <p><strong>Three: the admin screens don&#x27;t need to be pretty.</strong> The staff console uses the same design framework as the reader site, but I asked for speed over polish. One screen shows whether outside connections such as translation, public data and alerts are working.</p>
 <p><strong>Four: anything AI writes is labeled as AI-written.</strong> AI writes the monthly briefing. The menu itself says &quot;written by AI,&quot; so it never blends in with reporters&#x27; work.</p>
 
@@ -128,21 +129,21 @@ img{max-width:100%}
 <div>
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">Correction 1 · October 2026</p>
 <p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">Before: </span>Automated checks on every push</del></p>
-<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600">Checks only on pull requests or manual runs</p>
+<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600"><ins style="text-decoration: none"><span class="sr">After: </span>Checks only on pull requests or manual runs</ins></p>
 <p style="margin: 0; font-family: 'Pretendard', sans-serif; font-size: 15px; line-height: 1.8">Every edit, even to the work log, set off an eight-minute check. It ran 248 times in two days and used up the month&#x27;s 2,000 minutes. I went through the logs, found the cause and changed when it runs.</p>
 </div>
 
 <div>
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">Correction 2 · October 2026</p>
 <p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">Before: </span>Correction requests answered within 10 days</del></p>
-<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600">An alert email to the operator for every new request</p>
-<p style="margin: 0; font-family: 'Pretendard', sans-serif; font-size: 15px; line-height: 1.8">The corrections page promised a reply within 10 days. But requests weren&#x27;t arriving by email; they piled up in the admin console. Since October 14, the operator gets an alert email the moment a request is saved. The email carries no requester names or request details. The transparency report shows that all three correction requests received this quarter were handled within a day.</p>
+<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600"><ins style="text-decoration: none"><span class="sr">After: </span>An alert email to the operator for every new request</ins></p>
+<p style="margin: 0; font-family: 'Pretendard', sans-serif; font-size: 15px; line-height: 1.8">The corrections page promised a reply within 10 days. But requests weren&#x27;t arriving by email; they piled up in the admin console. Since October 14, the operator gets an alert email the moment a request is saved. The email carries no requester names or request details. The transparency report shows that all three correction requests received in the fourth quarter were handled within a day.</p>
 </div>
 
 <div>
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">Follow-up · November 2026</p>
 <p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">Before: </span>Running within the $5 base monthly plan</del></p>
-<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600">Check the month&#x27;s remaining allowance before any bulk write</p>
+<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600"><ins style="text-decoration: none"><span class="sr">After: </span>Check the month&#x27;s remaining allowance before any bulk write</ins></p>
 <p style="margin: 0; font-family: 'Pretendard', sans-serif; font-size: 15px; line-height: 1.8">In October, database writes passed the included 50 million rows and reached 82 million, adding $33 to the bill. The overage came as the archive passed 750,000 stories. Since November 1, a bulk job won&#x27;t start if this month&#x27;s writes plus its expected writes would exceed 90% of the allowance, and the morning check raises an alert at 80%. Writes from re-indexing were eliminated by moving search to a self-hosted service.</p>
 </div>
 
@@ -154,7 +155,7 @@ img{max-width:100%}
 <a href="network.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">Next — Rebuilding the Network website</a>
 </nav>
 
-</div>
+</main>
 </div>
 </div>
 <footer class="wrap" style="font-family: 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">

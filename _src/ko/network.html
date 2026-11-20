@@ -19,7 +19,8 @@ a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-dec
 .nav a{text-decoration:none}.nav a:hover{text-decoration:underline}
 .body p{margin:0 0 1.1rem}
 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
-.nav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
+.langs a[aria-current="page"]{color:#141414;font-weight:700;text-decoration:none}
+.nav > a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
 figcaption,p{text-wrap:pretty}
 h1,h2,h3{text-wrap:balance}
 ::selection{background:#141414;color:#ffffff}
@@ -27,7 +28,7 @@ h1,h2,h3{text-wrap:balance}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-9999px;top:0}.skip:focus{left:1rem;top:1rem;z-index:10;background:#ffffff;padding:.5rem 1rem;font-family:'Pretendard',sans-serif}
 @media (max-width:820px){
-.nav a,.langs a{display:inline-flex;align-items:center;min-height:44px}
+.nav a,.langs a,.meta a{display:inline-flex;align-items:center;min-height:44px}
 .nav{row-gap:0!important}
 .wrap{padding:0 1.25rem}
 .cols{grid-template-columns:minmax(0,1fr);row-gap:2rem}
@@ -55,7 +56,7 @@ img{max-width:100%}
 </nav>
 </header>
 
-<div class="cols" style="padding-top: 3rem">
+<main id="main" class="cols" style="padding-top: 3rem">
 
 <div class="s12" style="max-width: 920px">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">작업물 2 · 대학언론인 네트워크 홈페이지 · 운영 중</p>
@@ -66,7 +67,7 @@ img{max-width:100%}
 
 <div class="s12 pair" style="margin-top: 2.5rem">
 <figure style="margin: 0">
-<img src="img/net-home.jpg" alt="대학언론인 네트워크 홈페이지 첫 화면. 큰 행사 사진과 최근 활동 목록이 보인다" width="1115" height="610" loading="eager" style="display: block; width: 100%; height: auto; aspect-ratio: 1115 / 610; object-fit: cover; object-position: top; border: 1px solid #DDDDDD">
+<a href="img/net-home.jpg"><img src="img/net-home.jpg" alt="대학언론인 네트워크 홈페이지 첫 화면. 큰 행사 사진과 최근 활동 목록이 보인다" width="1115" height="610" loading="eager" style="display: block; width: 100%; height: auto; aspect-ratio: 1115 / 610; object-fit: cover; object-position: top; border: 1px solid #DDDDDD"></a>
 <figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">univjournalist.network 홈 화면, 2026년 11월 20일. 갈무리 = 황치웅</figcaption>
 </figure>
 <figure style="margin: 0">
@@ -75,13 +76,13 @@ img{max-width:100%}
 </figure>
 </div>
 
-<article id="main" class="s8 body" style="margin-top: 2.5rem; font-family: 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
+<article class="s8 body" style="margin-top: 2.5rem; font-family: 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
 <p><strong style="font-family: 'Pretendard', sans-serif">서울</strong> — 대학언론인 네트워크는 2020년 3월 출범한 비영리 단체다. 해마다 전국 대학언론인 100여 명이 모이는 콘퍼런스를 연다. 무료 실무 교육(아카데미)과 어워드도 운영한다. 학교가 학생 언론을 탄압하면 대응팀을 꾸리고, 편집권 침해 상담도 받는다.</p>
 <p>홈페이지는 이 사업을 알리는 창구다. 그런데 사업이 늘어나는 동안 홈페이지를 고칠 수 있는 사람은 늘지 않았다. 그동안 홈페이지는 외부 원페이지 제작 서비스로 운영했다. 페이지를 하나 늘리려 해도 돈을 더 내야 한다는 말을 듣고, 직접 만들기로 했다.</p>
 
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">편집 판단 3가지</h2>
 <p><strong>하나, 그림은 만들지 않는다.</strong> 생성형 이미지는 넣지 않고, 단체가 행사에서 직접 찍은 사진만 쓰기로 했다. 언론인 단체의 홈페이지라면 실제로 있었던 장면만 보여 줘야 한다고 봤다.</p>
-<p><strong>둘, 운영진이 직접 고친다.</strong> 공지 한 줄을 바꾸려 해도 코드를 손대야 하는 구조였다. 글과 설정을 Cloudflare 데이터베이스로 옮겨, 운영진이 관리 화면에서 바로 수정하도록 정했다. 바꾸는 방법은 실무 가이드북으로 따로 정리했다.</p>
+<p><strong>둘, 운영진이 직접 고친다.</strong> 처음 직접 만든 버전은 공지 한 줄을 바꾸려 해도 코드를 손대야 하는 구조였다. 글과 설정을 Cloudflare 데이터베이스로 옮겨, 운영진이 관리 화면에서 바로 수정하도록 정했다. 바꾸는 방법은 실무 가이드북으로 따로 정리했다.</p>
 <p><strong>셋, 사람이 바뀌어도 남게 한다.</strong> 대학언론 단체는 해마다 사람이 바뀐다. 코드 저장소를 개인 계정에서 단체 계정으로 옮겨, 담당자가 떠나도 사이트가 단체에 남도록 했다.</p>
 
 <h2 style="margin: 2.75rem 0 1rem; font-family: 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">전환</h2>
@@ -91,7 +92,7 @@ img{max-width:100%}
 <div style="font-family: 'Pretendard', sans-serif">
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">후속 · 2026년 11월 19일</p>
 <p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">고치기 전: </span>저장소에 올리면 사이트에 바로 반영된다</del></p>
-<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600">배포 연결을 새로 만들어 다시 이었다</p>
+<p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600"><ins style="text-decoration: none"><span class="sr">고친 뒤: </span>배포 연결을 새로 만들어 다시 이었다</ins></p>
 </div>
 <p>배포 연결이 끊겨 고친 내용이 사이트에 반영되지 않고 있었다. 저장소를 단체 계정으로 옮기면서 Cloudflare에 배포 프로젝트를 새로 만들어 다시 이었고, 같은 날 정식 사이트로 전환했다.</p>
 </article>
@@ -109,7 +110,7 @@ img{max-width:100%}
 <div style="border-top: 1px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em">홈페이지가 소개하는 일</p>
 <ul style="margin: 0; padding: 0 0 0 1.1rem; font-size: 14px; line-height: 1.75">
-<li>대학언론인 콘퍼런스 (평균 100여 명)</li>
+<li>대학언론인 콘퍼런스 (100여 명)</li>
 <li>대학언론인 아카데미</li>
 <li>대학언론인 어워드</li>
 <li>대학언론 탄압 대응</li>
@@ -137,7 +138,7 @@ img{max-width:100%}
 <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700">1면으로</a>
 </nav>
 
-</div>
+</main>
 </div>
 </div>
 <footer class="wrap" style="font-family: 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">

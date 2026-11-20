@@ -61,6 +61,7 @@ def build(page, src):
             s = s.replace('url(fonts/', 'url(../fonts/')
         if code == 'ja':
             s = s.replace('<style>\n', '<style>\n' + JA_FONTS, 1)
+            s = s.replace('href="../fonts/PretendardVariable.woff2"', 'href="../fonts/PretendardJP-subset.woff2"').replace('href="../fonts/ChosunilboNM.woff2"', 'href="../fonts/ShipporiMinchoB1-subset.woff2"')
             s = s.replace("'Pretendard', sans-serif", "'PretendardJP', 'Pretendard', sans-serif")
             s = s.replace("'ChosunilboNM', serif", "'ShipporiB1', 'ChosunilboNM', serif")
             s = s.replace('word-break:keep-all;overflow-wrap:break-word', 'word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere')
