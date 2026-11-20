@@ -26,9 +26,50 @@ h1,h2,h3{text-wrap:balance}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-9999px;top:0}
 .skip:focus{left:1rem;top:1rem;z-index:10;background:#ffffff;padding:.5rem 1rem;font-family:'PretendardJP','Pretendard',sans-serif}
+:root{--sans:'PretendardJP','Pretendard',sans-serif;--serif:'ChosunilboNM',serif}
+/* 지면 요소 */
+.m0{margin:0}
+.meta13{font-size:13px;color:#5A5A5A}
+.b7{font-weight:700}
+.press-item{display:grid;grid-template-columns:7.5rem minmax(0, 1fr);gap:0.25rem 1.5rem;padding:0.9rem 0;border-top:1px solid #DDDDDD}
+.b6{font-weight:600}
+.meta14{font-size:14px;color:#5A5A5A}
+.kicker{margin:0 0 0.75rem;font-size:13px;font-weight:700;letter-spacing:0.04em;color:#B3121F}
+.rule-box{border-top:1px solid #141414;padding-top:1rem}
+.label{margin:0 0 1rem;font-size:13px;font-weight:700;letter-spacing:0.04em}
+.tap{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+.muted{color:#5A5A5A}
+.nodeco{text-decoration:none}
+.h2-art{margin:2.75rem 0 1rem;font-family:var(--serif);font-weight:400;font-size:1.75rem;line-height:1.35}
+.page{font-family:var(--sans);color:#141414;background:#ffffff;padding:2rem 0 5rem}
+.shot{display:block;width:100%;height:auto;border:1px solid #DDDDDD}
+.cap{margin-top:0.6rem;font-size:13px;color:#5A5A5A}
+.sans{font-family:var(--sans)}
+footer.colophon{font-family:var(--sans);color:#5A5A5A;font-size:13px;line-height:1.7;padding-bottom:3rem}
+.colophon-rule{border-top:6px double #141414;padding-top:1rem;display:flex;flex-wrap:wrap;gap:0.25rem 1.5rem}
+.stat-n{font-family:var(--sans);font-variant-numeric:tabular-nums;letter-spacing:-0.02em;font-size:2.1rem;font-weight:500}
+.corr-old{margin:0 0 0.35rem;font-size:15px;line-height:1.6}
+.corr-new{margin:0 0 0.9rem;font-size:15px;line-height:1.6;font-weight:600}
+.mb1{margin:0 0 1rem}
+.stat-n2{font-family:var(--sans);font-variant-numeric:tabular-nums;letter-spacing:-0.02em;font-size:2rem;font-weight:500}
+.topbar{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:0.5rem 2rem;border-bottom:1px solid #141414;padding-bottom:0.8rem}
+.logo{font-family:var(--serif);font-weight:400;font-size:1.6rem;text-decoration:none;letter-spacing:-0.04em}
+.topnav{display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;font-size:14px;font-weight:600}
+.w5{font-weight:500}
+.pt3{padding-top:3rem}
+.mw920{max-width:920px}
+.kicker-l{margin:0 0 1rem;font-size:13px;font-weight:700;letter-spacing:0.04em;color:#B3121F}
+.h1-art{margin:0;font-family:var(--serif);font-weight:400;font-size:3.6rem;line-height:1.2;letter-spacing:-0.035em}
+.byline{margin:1.5rem 0 0;font-size:14px;color:#5A5A5A}
+.art{margin-top:2.5rem;font-family:var(--sans);font-size:18px;line-height:1.9}
+.side{margin-top:2.5rem;display:flex;flex-direction:column;gap:2.5rem}
+.credits{margin:0;display:grid;grid-template-columns:max-content minmax(0, 1fr);gap:0.55rem 1.25rem;font-size:14px;line-height:1.5}
+.corr-body{margin:0;font-family:var(--sans);font-size:15px;line-height:1.8}
+.endnav{margin-top:3.5rem;border-top:2px solid #141414;padding-top:1rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+.num{font-family:var(--sans);font-variant-numeric:tabular-nums;letter-spacing:-0.02em;font-weight:500}
 *{box-sizing:border-box}
 img{max-width:100%}
-.body p{margin:0 0 1.1rem}
+:where(.body p){margin:0 0 1.1rem}
 .three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
 @page{size:A4;margin:12mm}
@@ -50,12 +91,12 @@ img{max-width:100%}
 }
 @media print{
 body>div{padding:0!important}
-footer{margin-top:1.5rem;padding-bottom:0!important}
+footer.wrap{margin-top:1.5rem;padding-bottom:0!important}
 .skip,.nav,.langs,nav[aria-label],.meta a[href^="mailto"]{display:none!important}
 body{zoom:.88;font-size:11pt}
 a{text-decoration:none;color:#141414}
 .cols{display:block!important;row-gap:0!important}
-.s8,.s4,.s6,.s12{display:block}
+:where(.s8,.s4,.s6,.s12){display:block}
 li,figure,blockquote,dl,.stats,.box,.three>div{break-inside:avoid}
 .more{display:none!important}
 .pb{break-before:page}
@@ -63,5 +104,6 @@ h1,h2,h3,blockquote{break-after:avoid}
 p{orphans:3;widows:3}
 img{max-height:9cm;width:auto!important}
 }
+:root{--sans:'PretendardJP','Pretendard',sans-serif;--serif:'ShipporiB1','ChosunilboNM',serif}
 @media (min-width:821px){.hlead{font-size:2.6rem!important}}
 @media (max-width:820px){.mast{white-space:nowrap;font-size:clamp(2.25rem,11vw,3.4rem)!important}}
