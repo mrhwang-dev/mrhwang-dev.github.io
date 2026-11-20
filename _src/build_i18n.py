@@ -8,7 +8,7 @@ from i18n import EN, JA
 
 ROOT = os.path.join(HERE, '..', 'hwangchiwoong')
 BASE = 'https://mrhwang-dev.github.io/hwangchiwoong/'
-PAGES = ['index.html', 'hub.html', 'network.html']
+PAGES = ['index.html', 'hub.html', 'network.html', 'column.html']
 LANGS = {'ko': ('한국어', ''), 'en': ('English', 'en/'), 'ja': ('日本語', 'ja/')}
 HANGUL = re.compile('[가-힣]')
 
