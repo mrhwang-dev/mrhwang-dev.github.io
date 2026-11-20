@@ -92,15 +92,16 @@ def build(page, src):
         if code != 'ko':
             s = s.replace('<html lang="ko">', f'<html lang="{code}">')
             s = re.sub(r'(src|href|srcset)="(img|fonts)/', r'\1="../\2/', s)
+            s = s.replace('href="style.css"', 'href="../style.css"')
             s = s.replace('url(fonts/', 'url(../fonts/')
         if code == 'ja':
-            s = s.replace('<style>\n', '<style>\n' + JA_FONTS, 1)
+            s = s.replace('href="../style.css"', 'href="../style-ja.css"')
             s = s.replace('href="../fonts/PretendardVariable.woff2"', 'href="../fonts/PretendardJP-subset.woff2"').replace('href="../fonts/ChosunilboNM.woff2"', 'href="../fonts/ShipporiMinchoB1-subset.woff2"')
             s = s.replace("'Pretendard', sans-serif", "'PretendardJP', 'Pretendard', sans-serif")
             s = s.replace("'ChosunilboNM', serif", "'ShipporiB1', 'ChosunilboNM', serif")
             s = s.replace('第2回</a> · <a', '第2回</a>・<a')
             s = s.replace('word-break:keep-all;overflow-wrap:break-word', 'word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere')
-            s = s.replace('</style>', '@media (min-width:821px){.hlead{font-size:2.6rem!important}}\n@media (max-width:820px){.mast{white-space:nowrap;font-size:clamp(2.25rem,11vw,3.4rem)!important}}\n</style>', 1)
+
         s = re.sub(r'(<h[12][^>]*>[^<]*?)85만 건,', r'\1<span style="white-space:nowrap">85만 건,</span>', s)
         for credit in ('갈무리 = 황치웅', '사진 = 대학언론인 네트워크', 'Screenshot: Chiwoong Hwang', 'Photo: University Journalists Network', '画面キャプチャ＝ファン・チウン', '写真＝大学ジャーナリスト・ネットワーク'):
             s = s.replace(credit + '</figcaption>', f'<span style="white-space:nowrap">{credit}</span></figcaption>')
@@ -124,3 +125,12 @@ for page in PAGES:
         os.makedirs(d, exist_ok=True)
         open(os.path.join(d, page), 'w', encoding='utf-8').write(s)
     print('built', page)
+
+# 일본어용 스타일시트: 공통 스타일에 일본어 글꼴과 줄바꿈 규칙을 덧씌운다
+css = open(os.path.join(ROOT, 'style.css'), encoding='utf-8').read()
+ja = JA_FONTS.replace('url(../fonts/', 'url(fonts/') + css
+ja = ja.replace("'Pretendard',sans-serif", "'PretendardJP','Pretendard',sans-serif")
+ja = ja.replace('word-break:keep-all;overflow-wrap:break-word', 'word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere')
+ja += '@media (min-width:821px){.hlead{font-size:2.6rem!important}}\n@media (max-width:820px){.mast{white-space:nowrap;font-size:clamp(2.25rem,11vw,3.4rem)!important}}\n'
+open(os.path.join(ROOT, 'style-ja.css'), 'w', encoding='utf-8').write(ja)
+print('built style-ja.css')

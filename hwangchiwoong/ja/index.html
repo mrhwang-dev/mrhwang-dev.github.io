@@ -26,50 +26,7 @@
 <meta name="description" content="ファン・チウンのポートフォリオ。Campus Press Hub と大学ジャーナリスト・ネットワークのサイトを企画し、つくった記録。">
 <link rel="preload" href="../fonts/PretendardJP-subset.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../fonts/ShipporiMinchoB1-subset.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-@font-face{font-family:'PretendardJP';src:url(../fonts/PretendardJP-subset.woff2) format('woff2');font-weight:45 920;font-style:normal;font-display:swap}
-@font-face{font-family:'ShipporiB1';src:url(../fonts/ShipporiMinchoB1-subset.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Pretendard';src:url(../fonts/PretendardVariable.woff2) format('woff2');font-weight:45 920;font-style:normal;font-display:swap}
-@font-face{font-family:'ChosunilboNM';src:url(../fonts/ChosunilboNM.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
-body{margin:0;background:#ffffff;word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere}
-a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-decoration-color:#BBBBBB}a:hover{color:#B3121F;text-decoration-color:currentColor}
-.wrap{max-width:1240px;margin:0 auto;padding:0 2.5rem;box-sizing:border-box}
-.cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:2.5rem}
-.s8{grid-column:span 8}.s4{grid-column:span 4}.s6{grid-column:span 6}.s12{grid-column:span 12}
-.nav a{text-decoration:none}.nav a:hover{text-decoration:underline}
-.rule-l{border-left:1px solid #141414;padding-left:2.5rem}
-.body2{column-count:2;column-gap:2rem}
-.body2 p{orphans:3;widows:3;break-inside:avoid}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
-.langs a[aria-current="page"]{color:#141414;font-weight:700;text-decoration:none}
-.nav > a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
-figcaption,p{text-wrap:pretty}
-h1,h2,h3{text-wrap:balance}
-::selection{background:#141414;color:#ffffff}
-:focus-visible{outline:2px solid #B3121F;outline-offset:3px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:-9999px;top:0}.skip:focus{left:1rem;top:1rem;z-index:10;background:#ffffff;padding:.5rem 1rem;font-family:'Pretendard',sans-serif}
-@media (max-width:820px){
-.nav a,.langs a,.meta a{display:inline-flex;align-items:center;min-height:44px}
-.nav{row-gap:0!important}
-.wrap{padding:0 1.25rem}
-.cols{grid-template-columns:minmax(0,1fr);row-gap:2rem}
-.s8,.s4,.s6,.s12{grid-column:auto}
-.rule-l{border-left:0;padding-left:0;border-top:1px solid #141414;padding-top:2rem}
-.body2{column-count:1}
-.mast{font-size:3.4rem!important}
-.hlead{font-size:2.1rem!important}
-.stats>div{padding:.75rem .5rem .75rem 0!important}
-.stats>div>div:first-child{font-size:1.5rem!important}
-}
-
-*{box-sizing:border-box}
-img{max-width:100%}
-@page{margin:12mm}
-@media print{body{zoom:.88}body>div{padding:0!important}footer{padding-bottom:0!important}.skip,.nav,.langs,nav[aria-label],.meta a[href^="mailto"]{display:none!important}body{font-size:11pt}a{text-decoration:none;color:#141414}.cols{display:block!important}.s8,.s4,.s6,.s12{display:block}li,figure,blockquote,dl{break-inside:avoid}h1,h2,h3,blockquote{break-after:avoid}.cols{row-gap:0!important}p{orphans:3;widows:3}img{max-height:9cm;width:auto!important}}
-@media (min-width:821px){.hlead{font-size:2.6rem!important}}
-@media (max-width:820px){.mast{white-space:nowrap;font-size:clamp(2.25rem,11vw,3.4rem)!important}}
-</style>
+<link rel="stylesheet" href="../style-ja.css">
 </head>
 <body>
 <a class="skip" href="#main">本文へ移動</a>
@@ -103,7 +60,7 @@ img{max-width:100%}
 <h2 class="hlead" style="margin: 0; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 3.4rem; line-height: 1.2; letter-spacing: -0.035em">散らばった学生新聞の記事85万件、<br>一か所で探す</h2>
 <p style="margin: 1.1rem 0 1.75rem; font-size: 1.2rem; line-height: 1.6; color: #333333">韓国全土の195大学、432の学生メディアの記事を集め、元の記事へつなぐ検索サービスを企画し、運営する。</p>
 <figure style="margin: 0 0 1.75rem">
-<a href="../img/hub-home.jpg"><picture><source media="screen and (max-width: 820px)" srcset="../img/hub-home-m.jpg" width="600" height="460"><img src="../img/hub-home.jpg" alt="Campus Press Hub のトップ画面。エディターズピックと多く報じられた話題の一覧が見える" width="1115" height="690" loading="eager" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></picture></a>
+<a href="../img/hub-home.jpg"><picture><source media="screen and (max-width: 640px)" srcset="../img/hub-home-m.jpg" width="568" height="602"><img src="../img/hub-home.jpg" alt="Campus Press Hub のトップ画面。エディターズピックと多く報じられた話題の一覧が見える" width="1115" height="690" loading="eager" style="display: block; width: 100%; height: auto; border: 1px solid #DDDDDD"></picture></a>
 <figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">campuspress.kr のトップ画面、2026年11月20日。<span style="white-space:nowrap">画面キャプチャ＝ファン・チウン</span></figcaption>
 </figure>
 <div class="body2" style="font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 17px; line-height: 1.85">
@@ -117,7 +74,7 @@ img{max-width:100%}
 <div style="padding: 1rem"><div style="font-family: 'PretendardJP', 'Pretendard', sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; font-size: 2rem; font-weight: 500">432</div><div style="font-size: 13px; color: #5A5A5A">メディア</div></div>
 </div>
 <p style="margin: 0.5rem 0 1.5rem; font-size: 12px; color: #5A5A5A">出典：campuspress.kr トップ画面の表示、2026年11月20日時点</p>
-<a href="hub.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 700">全文を読む ― 編集判断4つ、訂正・続報3件</a>
+<a class="more" href="hub.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 700">全文を読む ― 編集判断4つ、訂正・続報3件</a>
 </article>
 
 <aside class="s4 rule-l">
@@ -128,19 +85,19 @@ img{max-width:100%}
 <figcaption style="margin-top: 0.5rem; font-size: 12px; color: #5A5A5A">2026年 大学ジャーナリスト・カンファレンス「跳躍」。<span style="white-space:nowrap">写真＝大学ジャーナリスト・ネットワーク</span></figcaption>
 </figure>
 <p style="margin: 0 0 1rem; font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 16px; line-height: 1.8">2020年に発足した学生メディア支援団体のサイトを改修し、11月19日に正式公開した。コードを知らない運営メンバーでも、文章や設定を自分で直せるようにした。</p>
-<a href="network.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 700">全文を読む</a>
+<a class="more" href="network.html" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; font-weight: 700">全文を読む</a>
 
-<div style="margin-top: 2.5rem; border-top: 2px solid #141414; padding-top: 1rem">
+<div class="box" style="margin-top: 2.5rem; border-top: 2px solid #141414; padding-top: 1rem">
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">今号の訂正</p>
 <p style="margin: 0 0 0.4rem; font-size: 14px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">訂正前：</span>訂正依頼には10日以内に回答する</del></p>
 <p style="margin: 0 0 0.75rem; font-size: 14px; line-height: 1.6"><ins style="text-decoration: none; font-weight: 600"><span class="sr">訂正後：</span>依頼が届くとすぐ運営者に通知メール</ins></p>
 <p style="margin: 0; font-size: 13px; line-height: 1.65; color: #5A5A5A">訂正の案内ページで10日以内に答えると約束しながら、依頼は管理画面にたまるだけだった。10月14日からは依頼が届くとすぐ運営者に通知メールが届き、第4四半期の訂正依頼3件はすべて1日以内に処理した。 <a href="hub.html#corrections">ハブの記事の訂正欄へ</a></p>
 </div>
-<div style="border-top: 1px solid #141414; padding-top: 1rem; margin-top: 2rem">
+<div class="box" style="border-top: 1px solid #141414; padding-top: 1rem; margin-top: 2rem">
 <p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">コラム・AIとの仕事の進め方</p>
 <h3 style="margin: 0 0 0.75rem; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 1.5rem; line-height: 1.35"><a href="column.html" style="text-decoration: none">コードを読めない編集者の仕事のルール</a></h3>
 <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #333333">コードが読めないから決めたルールは四つ。仕事を分けて任せ、分からないことは空けておかせ、結果は自分で押して確かめ、誤りは線を引いて残す。</p>
-<p style="margin: 0.5rem 0 0; font-size: 14px; font-weight: 700"><a href="column.html" style="display: inline-flex; align-items: center; min-height: 44px">全文を読む</a></p>
+<p class="more" style="margin: 0.5rem 0 0; font-size: 14px; font-weight: 700"><a href="column.html" style="display: inline-flex; align-items: center; min-height: 44px">全文を読む</a></p>
 </div>
 </aside>
 
@@ -184,8 +141,8 @@ img{max-width:100%}
 </ol>
 <h3 style="margin: 1.25rem 0 0.25rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #5A5A5A">自分で企画して書いた記事</h3>
 <ol style="margin: 0; padding: 0; list-style: none">
-<li style="display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.25rem 1.5rem; padding: 0.9rem 0; border-top: 1px solid #DDDDDD"><span style="font-size: 13px; color: #5A5A5A">2021年9～10月<br>マガジンドットキム</span><span><a href="https://www.magazine.kim/news/articleView.html?idxno=3047" style="font-weight: 600">「記者INSIDE①　新人記者が受け取った『資料』は広告だった」（韓国語）</a><br><span style="font-size: 14px; color: #5A5A5A">自分で企画して書いた3回連載 ― <a href="https://www.magazine.kim/news/articleView.html?idxno=3142">第2回</a>・<a href="https://www.magazine.kim/news/articleView.html?idxno=3280">第3回</a></span></span></li>
-<li style="display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.25rem 1.5rem; padding: 0.9rem 0; border-top: 1px solid #DDDDDD"><span style="font-size: 13px; color: #5A5A5A">2022年3月<br>大学アリ</span><span><a href="https://univalli.com/news/article.html?no=23780" style="font-weight: 600">「［20代と大統領選］挑んだ」（韓国語）</a><br><span style="font-size: 14px; color: #5A5A5A">自ら書いたコラム。</span></span></li>
+<li style="display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.25rem 1.5rem; padding: 0.9rem 0; border-top: 1px solid #DDDDDD"><span style="font-size: 13px; color: #5A5A5A">2021年9～10月<br>マガジンドットキム</span><span><a href="https://www.magazine.kim/news/articleView.html?idxno=3047" style="font-weight: 600">「記者INSIDE①　新人記者が受け取った『資料』は広告だった」（韓国語）</a><br><span style="font-size: 14px; color: #5A5A5A">3回連載 ― <a href="https://www.magazine.kim/news/articleView.html?idxno=3142">第2回</a>・<a href="https://www.magazine.kim/news/articleView.html?idxno=3280">第3回</a></span></span></li>
+<li style="display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.25rem 1.5rem; padding: 0.9rem 0; border-top: 1px solid #DDDDDD"><span style="font-size: 13px; color: #5A5A5A">2022年3月<br>大学アリ</span><span><a href="https://univalli.com/news/article.html?no=23780" style="font-weight: 600">「［20代と大統領選］挑んだ」（韓国語）</a><br><span style="font-size: 14px; color: #5A5A5A">大統領選挙を前に書いたコラム。</span></span></li>
 </ol>
 </section>
 </main>
