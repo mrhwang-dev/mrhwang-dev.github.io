@@ -64,11 +64,15 @@ def build(page, src):
             s = s.replace("'Pretendard', sans-serif", "'PretendardJP', 'Pretendard', sans-serif")
             s = s.replace("'ChosunilboNM', serif", "'ShipporiB1', 'ChosunilboNM', serif")
             s = s.replace('word-break:keep-all;overflow-wrap:break-word', 'word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere')
-            s = s.replace('</style>', '@media (min-width:821px){.hlead{font-size:2.6rem!important}}\n</style>', 1)
+            s = s.replace('</style>', '@media (min-width:821px){.hlead{font-size:2.6rem!important}}\n@media (max-width:820px){.mast{white-space:nowrap;font-size:clamp(2.25rem,11vw,3.4rem)!important}}\n</style>', 1)
+        s = re.sub(r'(<h[12][^>]*>[^<]*?)85만 건,', r'\1<span style="white-space:nowrap">85만 건,</span>', s)
+        for credit in ('갈무리 = 황치웅', '사진 = 대학언론인 네트워크', 'Screenshot: Chiwoong Hwang', 'Photo: University Journalists Network', '画面キャプチャ＝ファン・チウン', '写真＝大学ジャーナリスト・ネットワーク'):
+            s = s.replace(credit + '</figcaption>', f'<span style="white-space:nowrap">{credit}</span></figcaption>')
         s = s.replace('{{LANG}}', lang_links(code, page)).replace('{{ALT}}', alternates(page))
         if code != 'ko':
             left = [m for m in HANGUL.findall(re.sub(r'<a [^>]*lang="ko"[^>]*>한국어</a>', '', s))]
             assert not left, (code, page, ''.join(left)[:80])
+        assert not re.search(r'\[[^\]<]*(한 줄|문장|One line|sentence)[^\]<]*\]|［[^］<]*(一行|一文|二文)[^］<]*］', s), (code, page, '빈칸이 남아 있음')
         out[code] = s
     return out
 

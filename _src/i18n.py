@@ -2,6 +2,12 @@
 # 한국어 원문 → 영어·일본어. 키는 한국어 페이지의 텍스트 조각(앞뒤 공백 제외)과 정확히 일치해야 한다.
 
 EN = {
+"본문으로 건너뛰기": "Skip to content",
+"고치기 전: ": "Before: ",
+"고친 뒤: ": "After: ",
+"원본 크기로 보기": "View full size",
+"구글 색인 페이지, 10월 점검 때와 11월 20일": "Pages indexed by Google, at the October audit and on November 20",
+"구글 검색 클릭 359회 · 노출 12,000회": "Google search: 359 clicks · 12,000 impressions",
 "황치웅 — 취재하던 사람이 만든 것들의 기록": "Chiwoong Hwang — A reporter's record of things he built",
 "황치웅의 포트폴리오. 대학언론 허브와 대학언론인 네트워크 홈페이지를 기획하고 만든 기록.": "Portfolio of Chiwoong Hwang: how he planned and built Campus Press Hub and the University Journalists Network website.",
 "2026년 11월 20일 금요일": "Friday, November 20, 2026",
@@ -184,6 +190,12 @@ EN = {
 }
 
 JA = {
+"본문으로 건너뛰기": "本文へ移動",
+"고치기 전: ": "訂正前：",
+"고친 뒤: ": "訂正後：",
+"원본 크기로 보기": "元のサイズで見る",
+"구글 색인 페이지, 10월 점검 때와 11월 20일": "Googleのインデックス済みページ（10月の点検時と11月20日）",
+"구글 검색 클릭 359회 · 노출 12,000회": "Google検索：クリック359回・表示12,000回",
 "황치웅 — 취재하던 사람이 만든 것들의 기록": "ファン・チウン ― 記者だった人間がつくったものの記録",
 "황치웅의 포트폴리오. 대학언론 허브와 대학언론인 네트워크 홈페이지를 기획하고 만든 기록.": "ファン・チウンのポートフォリオ。Campus Press Hub と大学ジャーナリスト・ネットワークのサイトを企画し、つくった記録。",
 "2026년 11월 20일 금요일": "2026年11月20日（金）",

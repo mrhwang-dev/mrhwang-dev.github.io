@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
 <link rel="alternate" hreflang="ko" href="https://mrhwang-dev.github.io/hwangchiwoong/network.html">
 <link rel="alternate" hreflang="en" href="https://mrhwang-dev.github.io/hwangchiwoong/en/network.html">
 <link rel="alternate" hreflang="ja" href="https://mrhwang-dev.github.io/hwangchiwoong/ja/network.html">
@@ -25,7 +24,16 @@ a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-dec
 .nav a{text-decoration:none}.nav a:hover{text-decoration:underline}
 .body p{margin:0 0 1.1rem}
 .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+.nav a[aria-current="page"]{text-decoration:underline;text-decoration-thickness:2px;text-decoration-color:#B3121F;text-underline-offset:6px}
+figcaption,p{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+::selection{background:#141414;color:#ffffff}
+:focus-visible{outline:2px solid #B3121F;outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:0}.skip:focus{left:1rem;top:1rem;z-index:10;background:#ffffff;padding:.5rem 1rem;font-family:'Pretendard',sans-serif}
 @media (max-width:820px){
+.nav a,.langs a{display:inline-flex;align-items:center;min-height:44px}
+.nav{row-gap:0!important}
 .wrap{padding:0 1.25rem}
 .cols{grid-template-columns:minmax(0,1fr);row-gap:2rem}
 .s8,.s4,.s12{grid-column:auto}
@@ -36,9 +44,11 @@ a{color:#141414;text-underline-offset:4px;text-decoration-thickness:1px;text-dec
 *{box-sizing:border-box}
 img{max-width:100%}
 @media (min-width:821px){.hlead{font-size:2.6rem!important}}
+@media (max-width:820px){.mast{white-space:nowrap;font-size:clamp(2.25rem,11vw,3.4rem)!important}}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 <div style="font-family: 'PretendardJP', 'Pretendard', sans-serif; color: #141414; background: #ffffff; padding: 2rem 0 5rem">
 <div class="wrap">
 
@@ -55,7 +65,7 @@ img{max-width:100%}
 <div class="cols" style="padding-top: 3rem">
 
 <div class="s12" style="max-width: 920px">
-<p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; color: #B3121F">作品2・大学ジャーナリスト・ネットワークのサイト・運営中</p>
+<p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">作品2・大学ジャーナリスト・ネットワークのサイト・運営中</p>
 <h1 class="hl" style="margin: 0; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 3.6rem; line-height: 1.2; letter-spacing: -0.035em">生成画像ではなく現場の写真で、団体のサイトを建て直す</h1>
 <p style="margin: 1.25rem 0 0; font-size: 1.25rem; line-height: 1.6; color: #333333">かつて議長を務めた学生メディア支援団体のサイトを改修した。団体が実際にしたことだけを見せ、コードを知らない運営メンバーでも自分で直せるようにした。</p>
 <p style="margin: 1.5rem 0 0; font-size: 14px; color: #5A5A5A">企画・編集 ファン・チウン・実装 Claude・2026年11月19日 正式公開・ <a href="https://univjournalist.network">univjournalist.network</a></p>
@@ -64,15 +74,15 @@ img{max-width:100%}
 <div class="s12 pair" style="margin-top: 2.5rem">
 <figure style="margin: 0">
 <img src="../img/net-home.jpg" alt="大学ジャーナリスト・ネットワークのトップ画面。大きな行事の写真と最近の活動一覧が見える" width="1115" height="610" loading="eager" style="display: block; width: 100%; height: auto; aspect-ratio: 1115 / 610; object-fit: cover; object-position: top; border: 1px solid #DDDDDD">
-<figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">univjournalist.network のトップ画面、2026年11月20日。画面キャプチャ＝ファン・チウン</figcaption>
+<figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">univjournalist.network のトップ画面、2026年11月20日。<span style="white-space:nowrap">画面キャプチャ＝ファン・チウン</span></figcaption>
 </figure>
 <figure style="margin: 0">
 <img src="../img/conference-2026.jpg" alt="2026年の大学ジャーナリスト・カンファレンス「跳躍」で、壇上に並んで話すパネリストたち" width="1344" height="896" loading="lazy" style="display: block; width: 100%; height: auto; aspect-ratio: 1115 / 610; object-fit: cover; object-position: center; border: 1px solid #DDDDDD">
-<figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">2026年 大学ジャーナリスト・カンファレンス「跳躍」。サイトの写真はすべて団体が自ら撮影した。写真＝大学ジャーナリスト・ネットワーク</figcaption>
+<figcaption style="margin-top: 0.6rem; font-size: 13px; color: #5A5A5A">2026年 大学ジャーナリスト・カンファレンス「跳躍」。サイトの写真はすべて団体が自ら撮影した。<span style="white-space:nowrap">写真＝大学ジャーナリスト・ネットワーク</span></figcaption>
 </figure>
 </div>
 
-<article class="s8 body" style="margin-top: 2.5rem; font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
+<article id="main" class="s8 body" style="margin-top: 2.5rem; font-family: 'PretendardJP', 'Pretendard', sans-serif; font-size: 18px; line-height: 1.9">
 <p><strong style="font-family: 'PretendardJP', 'Pretendard', sans-serif">【ソウル】</strong> 大学ジャーナリスト・ネットワークは2020年3月に発足した非営利団体だ。毎年、韓国全土から学生記者100人ほどが集まるカンファレンスを開き、無料の実務講座（アカデミー）とアワードも運営している。学校が学生メディアを弾圧すれば対応チームを組み、編集権の侵害についての相談も受ける。</p>
 <p>サイトはこうした事業を知らせる窓口だ。ところが事業が増えても、サイトを直せる人は増えなかった。それまでサイトは外部のワンページ制作サービスで運営していた。ページを一つ増やすにも追加料金がかかると言われ、自分でつくることにした。</p>
 
@@ -86,8 +96,8 @@ img{max-width:100%}
 
 <h2 id="corrections" style="margin: 2.75rem 0 1rem; font-family: 'ShipporiB1', 'ChosunilboNM', serif; font-weight: 400; font-size: 1.75rem; line-height: 1.35">訂正と続報</h2>
 <div style="font-family: 'PretendardJP', 'Pretendard', sans-serif">
-<p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; color: #B3121F">続報・2026年11月19日</p>
-<p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A">リポジトリに上げればすぐサイトに反映される</del></p>
+<p style="margin: 0 0 0.75rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #B3121F">続報・2026年11月19日</p>
+<p style="margin: 0 0 0.35rem; font-size: 15px; line-height: 1.6"><del style="color: #5A5A5A"><span class="sr">訂正前：</span>リポジトリに上げればすぐサイトに反映される</del></p>
 <p style="margin: 0 0 0.9rem; font-size: 15px; line-height: 1.6; font-weight: 600">デプロイの連携を新たにつくり直した</p>
 </div>
 <p>デプロイの連携が切れていて、直した内容がサイトに反映されていなかった。リポジトリを団体のアカウントに移すのに合わせて Cloudflare にデプロイ用のプロジェクトを新たにつくってつなぎ直し、同じ日に正式サイトへ切り替えた。</p>
@@ -95,7 +105,7 @@ img{max-width:100%}
 
 <aside class="s4" style="margin-top: 2.5rem; display: flex; flex-direction: column; gap: 2.5rem">
 <div style="border-top: 1px solid #141414; padding-top: 1rem">
-<p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">この団体と私</p>
+<p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em">この団体と私</p>
 <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 14px; line-height: 1.6">
 <li><span style="font-family: 'PretendardJP', 'Pretendard', sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; font-weight: 500">2021–2022</span><br>議長。アカデミーのシグネチャーコース1・2期、MBC「エムビックニュース」との共同取材、クッキーニュースとの大統領候補検証を担当した。</li>
 <li><span style="font-family: 'PretendardJP', 'Pretendard', sans-serif; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; font-weight: 500">2021</span><br>大学ジャーナリスト・アカデミーを開設。ソウル市の支援を受けた無料講座で、2023年初めまでに延べ受講者が2,400人を超えた。今もサイトの事業一覧に載っている。</li>
@@ -104,7 +114,7 @@ img{max-width:100%}
 </div>
 
 <div style="border-top: 1px solid #141414; padding-top: 1rem">
-<p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">サイトが紹介している事業</p>
+<p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em">サイトが紹介している事業</p>
 <ul style="margin: 0; padding: 0 0 0 1.1rem; font-size: 14px; line-height: 1.75">
 <li>大学ジャーナリスト・カンファレンス（100人ほど）</li>
 <li>大学ジャーナリスト・アカデミー</li>
@@ -118,7 +128,7 @@ img{max-width:100%}
 </div>
 
 <div style="border-top: 1px solid #141414; padding-top: 1rem">
-<p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.06em">クレジット</p>
+<p style="margin: 0 0 1rem; font-size: 13px; font-weight: 700; letter-spacing: 0.04em">クレジット</p>
 <dl style="margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.55rem 1.25rem; font-size: 14px; line-height: 1.5">
 <dt style="font-weight: 700">企画・編集判断</dt><dd style="margin: 0">ファン・チウン</dd>
 <dt style="font-weight: 700">設計・実装</dt><dd style="margin: 0">Claude (AI)</dd>
@@ -139,7 +149,7 @@ img{max-width:100%}
 </div>
 <footer class="wrap" style="font-family: 'PretendardJP', 'Pretendard', sans-serif; color: #5A5A5A; font-size: 13px; line-height: 1.7; padding-bottom: 3rem">
 <div style="border-top: 6px double #141414; padding-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem">
-<span>発行 ファン・チウン</span><span>最終更新 2026年11月20日</span><span>企画・編集 ファン・チウン・実装 Claude・原稿の推敲 agy</span><span>GitHub Pages で発行</span>
+<span>発行 ファン・チウン</span><span>最終更新 2026年11月20日</span><span>企画・編集 ファン・チウン・実装 Claude・原稿の推敲 agy</span><span>GitHub Pages で発行</span><span>連絡先 <a href="mailto:facti301@gmail.com">facti301@gmail.com</a></span>
 </div>
 </footer>
 </body>
