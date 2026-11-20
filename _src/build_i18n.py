@@ -1,0 +1,85 @@
+# -*- coding: utf-8 -*-
+"""한국어 페이지(hwangchiwoong/*.html)를 원본으로 en/, ja/ 페이지를 만든다.
+한국어 페이지에는 언어 전환 링크와 hreflang만 채워 넣는다."""
+import html, os, re, sys
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from i18n import EN, JA
+
+ROOT = os.path.join(HERE, '..', 'hwangchiwoong')
+BASE = 'https://mrhwang-dev.github.io/hwangchiwoong/'
+PAGES = ['index.html', 'hub.html', 'network.html']
+LANGS = {'ko': ('한국어', ''), 'en': ('English', 'en/'), 'ja': ('日本語', 'ja/')}
+HANGUL = re.compile('[가-힣]')
+
+JA_FONTS = """@font-face{font-family:'PretendardJP';src:url(../fonts/PretendardJP-subset.woff2) format('woff2');font-weight:45 920;font-style:normal;font-display:swap}
+@font-face{font-family:'ShipporiB1';src:url(../fonts/ShipporiMinchoB1-subset.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+"""
+
+def rel(cur, target, page):
+    """cur 언어의 페이지에서 target 언어의 같은 페이지로 가는 상대 경로"""
+    up = '' if cur == 'ko' else '../'
+    return up + LANGS[target][1] + page
+
+def lang_links(cur, page):
+    out = []
+    for code, (label, _) in LANGS.items():
+        cur_attr = ' aria-current="page"' if code == cur else ''
+        out.append(f'<a href="{rel(cur, code, page)}" lang="{code}" hreflang="{code}"{cur_attr}>{label}</a>')
+    return ' · '.join(out)
+
+def alternates(page):
+    tail = '' if page == 'index.html' else page
+    links = [f'<link rel="alternate" hreflang="{c}" href="{BASE}{p}{tail}">' for c, (_, p) in LANGS.items()]
+    links.append(f'<link rel="alternate" hreflang="x-default" href="{BASE}{tail}">')
+    return '\n'.join(links)
+
+def prepare_source(s, page):
+    """한국어 원본에 언어 전환 자리({{LANG}})와 hreflang 자리({{ALT}})를 한 번만 넣는다."""
+    if '{{LANG}}' not in s and 'hreflang="en"' not in s:
+        if '<span>한국어 · English · 日本語</span>' in s:
+            s = s.replace('<span>한국어 · English · 日本語</span>', '<span class="langs">{{LANG}}</span>')
+        else:
+            s = re.sub(r'(<nav class="nav" aria-label="주요 메뉴"[^>]*>.*?)(</nav>)',
+                       r'\1<span class="langs" style="font-weight: 500">{{LANG}}</span>\n\2', s, count=1, flags=re.S)
+        s = s.replace('<meta name="robots" content="noindex">', '<meta name="robots" content="noindex">\n{{ALT}}', 1)
+    return s
+
+def translate(s, table):
+    for ko in sorted(table, key=len, reverse=True):
+        s = s.replace(ko, html.escape(table[ko], quote=True))
+    return s
+
+def build(page, src):
+    out = {}
+    for code in LANGS:
+        s = src
+        if code != 'ko':
+            s = translate(s, EN if code == 'en' else JA)
+            s = s.replace('<html lang="ko">', f'<html lang="{code}">')
+            s = re.sub(r'(src|href)="(img|fonts)/', r'\1="../\2/', s)
+            s = s.replace('url(fonts/', 'url(../fonts/')
+        if code == 'ja':
+            s = s.replace('<style>\n', '<style>\n' + JA_FONTS, 1)
+            s = s.replace("'Pretendard', sans-serif", "'PretendardJP', 'Pretendard', sans-serif")
+            s = s.replace("'ChosunilboNM', serif", "'ShipporiB1', 'ChosunilboNM', serif")
+            s = s.replace('word-break:keep-all;overflow-wrap:break-word', 'word-break:auto-phrase;line-break:strict;overflow-wrap:anywhere')
+        s = s.replace('{{LANG}}', lang_links(code, page)).replace('{{ALT}}', alternates(page))
+        if code != 'ko':
+            left = [m for m in HANGUL.findall(re.sub(r'<a [^>]*lang="ko"[^>]*>한국어</a>', '', s))]
+            assert not left, (code, page, ''.join(left)[:80])
+        out[code] = s
+    return out
+
+SRC = os.path.join(HERE, 'ko')
+os.makedirs(SRC, exist_ok=True)
+for page in PAGES:
+    sp = os.path.join(SRC, page)
+    if not os.path.exists(sp):  # 처음 한 번: 공개 중인 한국어 페이지를 원본으로 옮긴다
+        open(sp, 'w', encoding='utf-8').write(prepare_source(open(os.path.join(ROOT, page), encoding='utf-8').read(), page))
+    src = open(sp, encoding='utf-8').read()
+    for code, s in build(page, src).items():
+        d = os.path.join(ROOT, LANGS[code][1])
+        os.makedirs(d, exist_ok=True)
+        open(os.path.join(d, page), 'w', encoding='utf-8').write(s)
+    print('built', page)
