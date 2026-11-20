@@ -158,6 +158,14 @@ EN = {
 "「[20대, 대선] 덤볐다」": "“Twenty-somethings and the election: we took it on” (in Korean)",
 "직접 쓴 칼럼.": "A column I wrote.",
 "시사IN": "SisaIN",
+"2015년 1학년 때 단과대 학생회장의 장학금 부당 수령과 동아리연합회 운영비 횡령 의혹을 취재해 〈조대신문〉 1면에 실었습니다. 배포한 신문 1,700여 부가 세 시간 만에 사라졌고, 경찰 수사로 이어졌습니다. 이 보도로 학보사에서 해직됐지만, 뒤에 통신원으로 돌아와 2020년 총선 기획을 썼습니다.": "In 2015, as a first-year, I reported on a college student-council president improperly collecting a scholarship and on alleged embezzlement of the student club federation's funds, and the story ran on Jodae Sinmun's front page. About 1,700 copies vanished within three hours of distribution, and the police opened an investigation. I was dismissed from the paper over the story, but later came back as a correspondent and wrote the 2020 election series.",
+"2015년 11월": "Nov. 2015",
+"한국대학신문": "UNN (Korea University Newspaper)",
+"뉴시스": "Newsis",
+"「학생자치회 비리 폭로한 조선대 학보지 수천부 사라져」": "“Thousands of copies of Chosun University paper that exposed student-council corruption disappear” (in Korean)",
+"1학년 때 쓴 학생회 비리 보도와, 그 신문이 사라진 일을 다룬 기사.": "Coverage of my first-year story on student-council corruption and of the paper's disappearance.",
+"「경찰, 조선대 학생회 횡령·장학금 편법 수령 수사 착수」": "“Police investigate Chosun University student-council embezzlement and scholarship misuse” (in Korean)",
+"보도 뒤 경찰이 수사에 나섰다는 기사.": "Report that police opened an investigation after the story.",
 }
 
 JA = {
@@ -318,5 +326,13 @@ JA = {
 "「[20대, 대선] 덤볐다」": "「［20代と大統領選］挑んだ」（韓国語）",
 "직접 쓴 칼럼.": "自ら書いたコラム。",
 "시사IN": "時事IN",
+"2015년 1학년 때 단과대 학생회장의 장학금 부당 수령과 동아리연합회 운영비 횡령 의혹을 취재해 〈조대신문〉 1면에 실었습니다. 배포한 신문 1,700여 부가 세 시간 만에 사라졌고, 경찰 수사로 이어졌습니다. 이 보도로 학보사에서 해직됐지만, 뒤에 통신원으로 돌아와 2020년 총선 기획을 썼습니다.": "2015年、1年生のときに、単科大学の学生会長による奨学金の不正受給とサークル連合会の運営費横領の疑いを取材し、『朝大新聞』の1面に載せました。配った新聞1,700部余りが3時間で消え、警察の捜査につながりました。この報道で学生新聞を解任されましたが、のちに通信員として戻り、2020年の総選挙企画を書きました。",
+"2015년 11월": "2015年11月",
+"한국대학신문": "韓国大学新聞",
+"뉴시스": "ニューシス",
+"「학생자치회 비리 폭로한 조선대 학보지 수천부 사라져」": "「学生自治会の不正を暴いた朝鮮大の学生新聞、数千部が消える」（韓国語）",
+"1학년 때 쓴 학생회 비리 보도와, 그 신문이 사라진 일을 다룬 기사.": "1年生のときに書いた学生会の不正報道と、その新聞が消えた出来事を伝える記事。",
+"「경찰, 조선대 학생회 횡령·장학금 편법 수령 수사 착수」": "「警察、朝鮮大の学生会横領・奨学金の不正受給を捜査へ」（韓国語）",
+"보도 뒤 경찰이 수사에 나섰다는 기사.": "報道のあと警察が捜査に乗り出したという記事。",
 }
 JA.pop("취재하던 사람이 만든 것들의 기록입니다. 기획と판단, 검증은 제가 하고 코드는 AI가 씁니다. 누가 무엇을 했는지는 기사마다 끝에 크레딧으로 밝혔습니다.", None)
