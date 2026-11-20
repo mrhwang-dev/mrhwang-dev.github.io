@@ -70,7 +70,7 @@ def share_tags(s, code, page):
             '<meta name="twitter:card" content="summary_large_image">']
     if page == 'index.html':
         import json
-        ld = {"@context": "https://schema.org", "@type": "Person", "name": PERSON[code][0], "url": url,
+        ld = {"@context": "https://schema.org", "@type": "Person", "@id": BASE + "#person", "name": PERSON[code][0], "alternateName": [PERSON[c][0] for c in PERSON if c != code], "url": url,
               "jobTitle": PERSON[code][1], "email": "mailto:facti301@gmail.com",
               "alumniOf": {"@type": "CollegeOrUniversity", "name": "Chosun University"},
               "sameAs": ["https://www.linkedin.com/in/chiwoong-h-a4b833171/"]}
@@ -106,7 +106,7 @@ def build(page, src):
             s = s.replace(credit + '</figcaption>', f'<span style="white-space:nowrap">{credit}</span></figcaption>')
         s = s.replace('{{LANG}}', lang_links(code, page)).replace('{{ALT}}', alternates(page))
         if code != 'ko':
-            left = [m for m in HANGUL.findall(re.sub(r'<a [^>]*lang="ko"[^>]*>한국어</a>', '', s))]
+            left = [m for m in HANGUL.findall(re.sub(r'<script type="application/ld\+json">.*?</script>', '', re.sub(r'<a [^>]*lang="ko"[^>]*>한국어</a>', '', s), flags=re.S))]
             assert not left, (code, page, ''.join(left)[:80])
         assert not re.search(r'\[[^\]<]*(한 줄|문장|One line|sentence)[^\]<]*\]|［[^］<]*(一行|一文|二文)[^］<]*］', s), (code, page, '빈칸이 남아 있음')
         out[code] = s

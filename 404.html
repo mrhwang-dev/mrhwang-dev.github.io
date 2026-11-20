@@ -18,6 +18,7 @@ del{color:#5A5A5A}
 a{color:#141414;text-underline-offset:4px;text-decoration-color:#BBBBBB}a:hover{color:#B3121F}
 ul{list-style:none;padding:0;margin:2rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;font-weight:700}
 ul a{display:inline-flex;align-items:center;min-height:44px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 :focus-visible{outline:2px solid #B3121F;outline-offset:3px}
 </style>
 </head>
@@ -25,7 +26,7 @@ ul a{display:inline-flex;align-items:center;min-height:44px}
 <main>
 <p class="k">정정 · 404</p>
 <h1>찾는 지면이 없습니다</h1>
-<p><del>이 주소에 기사가 있다</del><br><strong>이 주소에는 기사가 없습니다.</strong> 주소가 바뀌었거나 잘못 입력됐을 수 있습니다.</p>
+<p><del><span class="sr">고치기 전: </span>이 주소에 기사가 있다</del><br><ins style="text-decoration: none"><span class="sr">고친 뒤: </span><strong>이 주소에는 기사가 없습니다.</strong></ins> 주소가 바뀌었거나 잘못 입력됐을 수 있습니다.</p>
 <p lang="en">This page doesn't exist. · <span lang="ja">このページは見つかりません。</span></p>
 <ul>
 <li><a href="/hwangchiwoong/">1면으로</a></li>
